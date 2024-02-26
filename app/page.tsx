@@ -1,113 +1,189 @@
-import Image from "next/image";
+'use client'
+
+import { useRef, useState } from 'react'
+import { useScroll, useWindowSize } from '@react-hooks-library/core'
+import { useWindowScrollPositions } from '@/lib/useWindowScrollPositions'
+import { GreenButton, WhiteButton } from '@/components/Button'
+import Space from '@/components/Space'
 
 export default function Home() {
+  const box = useRef<HTMLDivElement | null>(null)
+  const [scroll, setScroll] = useState({ x: 0, y: 0 })
+  const scrollPositions = useWindowScrollPositions()
+  const windowSize = useWindowSize()
+
+  useScroll(box, ({ scrollX, scrollY }) =>
+    setScroll({ x: scrollX, y: scrollY }),
+  )
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className={'flex flex-col h-[300vh]'}>
+      <div
+        className={'sticky top-0 z-10 flex flex-row h-[100vh] min-h-[100vh]'}
+      >
+        <div
+          className={`bg-white h-full flex flex-col items-end justify-between text-black`}
+          style={{
+            width: `${30 - Math.min(100, scrollPositions.scrollY / windowSize.height) * 30}%`,
+            minWidth: 0,
+          }}
+        >
+          <div>
+            <div className={'flex flex-col items-end gap-6 mr-6 mt-14'}>
+              <div className={'cursor-pointer hover:text-gray-300'}>Shop</div>
+              <div className={'cursor-pointer hover:text-gray-300'}>About</div>
+              <div className={'cursor-pointer hover:text-gray-300'}>Notice</div>
+            </div>
+            <div
+              className={
+                'w-7 border-t-[1px] border-solid border-[#999999] mr-6 mt-8 mb-4'
+              }
+            ></div>
+            <div className={'flex flex-row mr-6 ml-6 gap-1.5'}>
+              <img src={'/person.png'} className={'size-6 cursor-pointer'} />
+              <img src={'/cart.png'} className={'size-6 cursor-pointer'} />
+            </div>
+          </div>
+          <div className={'flex flex-col items-end mr-6'}>
+            <img src={'/logo33.png'} className={'h-10 mb-3 w-fit'} />
+            <div
+              className={
+                'font-extralight text-[16px] text-right mb-5 min-w-fit max-w-full'
+              }
+            >
+              NO EXCUSE, NO SURRENDER. In every moment, choose to stand out;
+              refuse to blend in. Our threads are for those who speak boldly—No
+              Thanks, EXCUSE not needed.
+            </div>
+            <div className={'flex flex-row mb-14'}>
+              <WhiteButton>ABOUT US</WhiteButton>
+              <Space x={16} />
+              <GreenButton>SHOP NOW</GreenButton>
+            </div>
+          </div>
+        </div>
+        <div
+          style={{
+            width: `${70 + (scrollPositions.scrollY / 100) * 30}%`,
+          }}
+          className={`relative bg-[url('/main_bg1.png')] bg-cover bg bg-center h-full p-3`}
+        >
+          <div
+            style={{
+              opacity: `${Math.min((scrollPositions.scrollY / windowSize.height) * 100, 100)}%`,
+            }}
+            className={`absolute top-0 left-0 flex flex-col items-end justify-end w-[30vw] h-full pb-32 px-12 bg-gradient-to-r from-[#000000a1] to-[rgba(34, 34, 34, 0)]`}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+            <div className={'font-normal text-[36px] text-right'}>
+              Brand Story
+            </div>
+            <Space y={12} />
+            <div className={'font-extralight text-[18px] text-right'}>
+              Detail Explanation about BrandBrand111 Detail Explanation about
+              BrandBrand111222
+            </div>
+            <Space y={20} />
+            <GreenButton>Go to Detail</GreenButton>
+          </div>
+          <div
+            className={'absolute top-0 right-0 flex flex-row justify-end'}
+            style={{
+              width: `${70 + (scrollPositions.scrollY / 100) * 15}vw`,
+              maxWidth: '85vw',
+            }}
+            // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
+          >
+            <img
+              src={'frame_1.png'}
+              // className={`w-[]`}
+              // className={'absolute top-0 right-0'}
+              // style={{ width: `${(scrollPositions.scrollY / 100) * 90}%` }}
             />
-          </a>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={'bg-black min-h-[200vh]'}>
+        {/*  DO NOTHING, just for spacing */}
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className={'sticky top-0 z-10 min-h-screen flex flex-row'}>
+        <div
+          className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-end items-end`}
+          style={{
+            backgroundImage:
+              "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/btn_shop.png')",
+          }}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <div className={'text-[36px] font-normal'}>SHOP</div>
+          <Space y={8} />
+          <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
+        </div>
+        <div className={'w-1/2 flex flex-col '}>
+          <div
+            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start`}
+            style={{
+              backgroundImage:
+                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/about.png')",
+            }}
+          >
+            <div className={'text-[36px] font-normal'}>NOTICE</div>
+            <Space y={8} />
+            <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
+          </div>
+          <div
+            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start`}
+            style={{
+              backgroundImage:
+                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/btn_faq.png')",
+            }}
+          >
+            <div className={'text-[36px] font-normal'}>FAQ</div>
+            <Space y={8} />
+            <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
+          </div>
+        </div>
       </div>
-    </main>
-  );
+      <div
+        className={
+          'w-full flex flex-col items-end gap-2 h-[320px] bg-white p-10 text-gray-600'
+        }
+      >
+        <div>NO, EXCUSE</div>
+        <div>Contact : 01051336385</div>
+        <div> Email : shinjayne@gmail.com</div>
+      </div>
+    </div>
+    // <div className={'flex flex-row'}>
+    //   <div
+    //     className={`bg-white h-screen`}
+    //     style={{ width: `${100 - 70 - scroll.y * 30}%` }}
+    //   >
+    //     {scroll.y}%
+    //   </div>
+    //   <div
+    //     style={{
+    //       width: `${70 + scroll.y * 30}%`,
+    //       // right: 0,
+    //     }}
+    //     className={`bg-[url('/main_bg1.png')] bg-cover bg bg-center h-screen p-3`}
+    //   >
+    //     <img
+    //       src={'frame_1.png'}
+    //       className={'fixed top-0'}
+    //       style={{ width: `${70 + scroll.y * 30}%` }}
+    //     />
+    //     <div
+    //       ref={box}
+    //       style={{
+    //         width: `${70 + scroll.y * 30}%`,
+    //         right: 0,
+    //       }}
+    //       className={'fixed overflow-y-scroll h-screen'}
+    //     >
+    //       <div className={'h-[300vh] border-solid border-2 border-black'}>
+    //         {' '}
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+  )
 }

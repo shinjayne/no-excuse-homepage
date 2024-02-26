@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Manrope;
+  font-weight: 200;
+  src: url("/fonts/Manrope-VariableFont_wght.ttf");
+  unicode-range: U+0030-007A;
+}
+
+@font-face {
+  font-family: Pretendard;
+  font-weight : 200;
+  src: url("/fonts/PretendardVariable.ttf");
+  unicode-range: U+AC00-D7A3;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,13 +31,14 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /*color: rgb(var(--foreground-rgb));*/
+  /*background: linear-gradient(*/
+  /*    to bottom,*/
+  /*    transparent,*/
+  /*    rgb(var(--background-end-rgb))*/
+  /*  )*/
+  /*  rgb(var(--background-start-rgb));*/
+  font-family: 'Pretendard', 'Manrope';
 }
 
 @layer utilities {
@@ -31,3 +46,4 @@ body {
     text-wrap: balance;
   }
 }
+
