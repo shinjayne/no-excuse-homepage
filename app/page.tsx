@@ -48,7 +48,7 @@ export default function Home() {
             <img src={'/logo33.png'} className={'h-10 mb-3 w-fit'} />
             <div
               className={
-                'font-extralight text-[16px] text-right mb-5 min-w-fit max-w-full'
+                'font-extralight text-[16px] text-right mb-5 pl-5 min-w-fit max-w-full'
               }
             >
               NO EXCUSE, NO SURRENDER. In every moment, choose to stand out;
@@ -72,7 +72,7 @@ export default function Home() {
             style={{
               opacity: `${Math.min((scrollPositions.scrollY / windowSize.height) * 100, 100)}%`,
             }}
-            className={`absolute top-0 left-0 flex flex-col items-end justify-end w-[30vw] h-full pb-32 px-12 bg-gradient-to-r from-[#000000a1] to-[rgba(34, 34, 34, 0)]`}
+            className={`absolute z-10 top-0 left-0 flex flex-col items-end justify-end w-[30vw] h-full pb-32 px-12 bg-gradient-to-r from-[#000000a1] to-[rgba(34, 34, 34, 0)] text-white`}
           >
             <div className={'font-normal text-[36px] text-right'}>
               Brand Story
@@ -86,15 +86,29 @@ export default function Home() {
             <GreenButton>Go to Detail</GreenButton>
           </div>
           <div
-            className={'absolute top-0 right-0 flex flex-row justify-end'}
+            className={
+              'absolute top-0 right-0 flex flex-row justify-center items-center'
+            }
             style={{
               width: `${70 + (scrollPositions.scrollY / 100) * 15}vw`,
+              height: `${80 + (scrollPositions.scrollY / 100) * 20}%`,
               maxWidth: '85vw',
+              maxHeight: '100%',
             }}
             // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
           >
             <img
-              src={'frame_1.png'}
+              src={'/post/photo1.jpeg'}
+              style={{
+                width: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
+                maxWidth: '50%',
+                borderImageSource: 'url("/photoframe.webp")',
+                borderImageWidth: '10px',
+                borderWidth: '10px',
+                borderImageRepeat: 'repeat',
+                borderImageSlice: '4% 4% 4% 4%',
+              }}
+              // src={'frame_1.png'}
               // className={`w-[]`}
               // className={'absolute top-0 right-0'}
               // style={{ width: `${(scrollPositions.scrollY / 100) * 90}%` }}
