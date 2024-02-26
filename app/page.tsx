@@ -75,12 +75,11 @@ export default function Home() {
             className={`absolute z-10 top-0 left-0 flex flex-col items-end justify-end w-[30vw] h-full pb-32 px-12 bg-gradient-to-r from-[#000000a1] to-[rgba(34, 34, 34, 0)] text-white`}
           >
             <div className={'font-normal text-[36px] text-right'}>
-              Brand Story
+              WASHED RELAXED HOOD ZIP UP
             </div>
             <Space y={12} />
             <div className={'font-extralight text-[18px] text-right'}>
-              Detail Explanation about BrandBrand111 Detail Explanation about
-              BrandBrand111222
+              NO,EXCUSE SELECT 24S/S
             </div>
             <Space y={20} />
             <GreenButton>Go to Detail</GreenButton>
@@ -107,6 +106,7 @@ export default function Home() {
                 borderWidth: '10px',
                 borderImageRepeat: 'repeat',
                 borderImageSlice: '4% 4% 4% 4%',
+                cursor: 'pointer',
               }}
               // src={'frame_1.png'}
               // className={`w-[]`}
