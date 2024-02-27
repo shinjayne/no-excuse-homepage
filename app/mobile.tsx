@@ -85,7 +85,7 @@ export default function MobileHome() {
           className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-end items-end`}
           style={{
             backgroundImage:
-              "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/btn_shop.png')",
+              "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme1.jpeg')",
           }}
         >
           <div className={'text-[36px] font-normal'}>Exhibition</div>
@@ -97,7 +97,7 @@ export default function MobileHome() {
             className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start`}
             style={{
               backgroundImage:
-                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/about.png')",
+                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme5.jpg')",
             }}
           >
             <div className={'text-[36px] font-normal'}>Select</div>
@@ -108,7 +108,7 @@ export default function MobileHome() {
             className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start`}
             style={{
               backgroundImage:
-                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/btn_faq.png')",
+                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme6.jpg')",
             }}
           >
             <div className={'text-[36px] font-normal'}>Brainstorming</div>
