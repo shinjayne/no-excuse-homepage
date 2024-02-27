@@ -110,7 +110,7 @@ export default function Desktop() {
             // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
           >
             <img
-              src={'/post/photo1.jpeg'}
+              src={'/post/post2.JPEG'}
               style={{
                 // width: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
                 // maxWidth: '50%',
