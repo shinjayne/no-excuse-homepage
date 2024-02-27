@@ -82,36 +82,36 @@ export default function MobileHome() {
       </div>
       <div className={'sticky top-0 z-10 min-h-screen flex flex-row'}>
         <div
-          className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-end items-end`}
+          className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-end items-end overflow-hidden break-all`}
           style={{
             backgroundImage:
               "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme1.jpeg')",
           }}
         >
-          <div className={'text-[36px] font-normal'}>Exhibition</div>
+          <div className={'text-[30px] font-normal'}>Exhibition</div>
           <Space y={8} />
           <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
         </div>
         <div className={'w-1/2 flex flex-col '}>
           <div
-            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start`}
+            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start overflow-hidden break-all`}
             style={{
               backgroundImage:
                 "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme5.jpg')",
             }}
           >
-            <div className={'text-[36px] font-normal'}>Select</div>
+            <div className={'text-[30px] font-normal'}>Select</div>
             <Space y={8} />
             <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
           </div>
           <div
-            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start`}
+            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start overflow-hidden break-all`}
             style={{
               backgroundImage:
                 "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme6.jpg')",
             }}
           >
-            <div className={'text-[36px] font-normal'}>Brainstorming</div>
+            <div className={'text-[30px] font-normal'}>Brainstorming</div>
             <Space y={8} />
             <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
           </div>
