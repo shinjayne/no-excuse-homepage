@@ -5,6 +5,8 @@ import { useScroll, useWindowSize } from '@react-hooks-library/core'
 import { useWindowScrollPositions } from '@/lib/useWindowScrollPositions'
 import { GreenButton, WhiteButton } from '@/components/Button'
 import Space from '@/components/Space'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Desktop() {
   const box = useRef<HTMLDivElement | null>(null)
@@ -16,6 +18,8 @@ export default function Desktop() {
     setScroll({ x: scrollX, y: scrollY }),
   )
 
+  const router = useRouter()
+
   return (
     <div className={'flex flex-col h-[300vh]'}>
       <div
@@ -24,15 +28,20 @@ export default function Desktop() {
         <div
           className={`bg-white h-full flex flex-col items-end justify-between text-black`}
           style={{
-            width: `${30 - Math.min(100, scrollPositions.scrollY / windowSize.height) * 30}%`,
+            width: `${20 - Math.min(100, scrollPositions.scrollY / windowSize.height) * 20}%`,
             minWidth: 0,
           }}
         >
-          <div>
+          <div className={'flex flex-col items-end'}>
             <div className={'flex flex-col items-end gap-6 mr-6 mt-14'}>
-              <div className={'cursor-pointer hover:text-gray-300'}>Shop</div>
-              <div className={'cursor-pointer hover:text-gray-300'}>About</div>
-              <div className={'cursor-pointer hover:text-gray-300'}>Notice</div>
+              <div className={'cursor-pointer hover:text-gray-300'}>
+                Exhibition
+              </div>
+              <div className={'cursor-pointer hover:text-gray-300'}>Select</div>
+              <div className={'cursor-pointer hover:text-gray-300'}>
+                Brainstorming
+              </div>
+              <div className={'cursor-pointer hover:text-gray-300'}>FAQ</div>
             </div>
             <div
               className={
@@ -44,18 +53,18 @@ export default function Desktop() {
               <img src={'/cart.png'} className={'size-6 cursor-pointer'} />
             </div>
           </div>
-          <div className={'flex flex-col items-end mr-6'}>
-            <img src={'/logo33.png'} className={'h-10 mb-3 w-fit'} />
+          <div className={'flex flex-col items-end mr-6 ml-5'}>
+            <img src={'/logo33.png'} className={'max-h-10 mb-3 w-fit'} />
             <div
               className={
-                'font-extralight text-[16px] text-right mb-5 pl-5 min-w-fit max-w-full'
+                'font-extralight text-[16px] text-right mb-5 min-w-fit max-w-full'
               }
             >
               NO EXCUSE, NO SURRENDER. In every moment, choose to stand out;
               refuse to blend in. Our threads are for those who speak boldly—No
               Thanks, EXCUSE not needed.
             </div>
-            <div className={'flex flex-row mb-14'}>
+            <div className={'flex flex-row mb-14 hidden'}>
               <WhiteButton>ABOUT US</WhiteButton>
               <Space x={16} />
               <GreenButton>SHOP NOW</GreenButton>
@@ -64,7 +73,7 @@ export default function Desktop() {
         </div>
         <div
           style={{
-            width: `${70 + (scrollPositions.scrollY / 100) * 30}%`,
+            width: `${80 + (scrollPositions.scrollY / 100) * 20}%`,
           }}
           className={`relative bg-[url('/main_bg1.png')] bg-cover bg bg-center h-full p-3`}
         >
@@ -82,16 +91,20 @@ export default function Desktop() {
               NO,EXCUSE SELECT 24S/S
             </div>
             <Space y={20} />
-            <GreenButton>Go to Detail</GreenButton>
+            <Link href={'/product/1'}>
+              <GreenButton>Go to Detail</GreenButton>
+            </Link>
           </div>
           <div
             className={
               'absolute top-0 right-0 flex flex-row justify-center items-center'
             }
             style={{
-              width: `${60 + (scrollPositions.scrollY / 100) * 15}vw`,
-              height: `${80 + (scrollPositions.scrollY / 100) * 20}%`,
+              width: '100%',
               maxWidth: '75vw',
+              // width: `${60 + (scrollPositions.scrollY / 100) * 15}vw`,
+              height: `${80 + (scrollPositions.scrollY / 100) * 20}%`,
+              // maxWidth: '75vw',
               maxHeight: '100%',
             }}
             // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
@@ -99,14 +112,19 @@ export default function Desktop() {
             <img
               src={'/post/photo1.jpeg'}
               style={{
-                width: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
-                maxWidth: '50%',
+                // width: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
+                // maxWidth: '50%',
+                height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
+                maxHeight: '80vh',
                 borderImageSource: 'url("/photoframe.webp")',
                 borderImageWidth: '10px',
                 borderWidth: '10px',
                 borderImageRepeat: 'repeat',
                 borderImageSlice: '4% 4% 4% 4%',
                 cursor: 'pointer',
+              }}
+              onClick={() => {
+                router.push('/product/1')
               }}
               // src={'frame_1.png'}
               // className={`w-[]`}
@@ -124,10 +142,10 @@ export default function Desktop() {
           className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-end items-end`}
           style={{
             backgroundImage:
-              "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/btn_shop.png')",
+              "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme1.jpeg')",
           }}
         >
-          <div className={'text-[36px] font-normal'}>SHOP</div>
+          <div className={'text-[36px] font-normal'}>Exhibition</div>
           <Space y={8} />
           <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
         </div>
@@ -136,10 +154,10 @@ export default function Desktop() {
             className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start`}
             style={{
               backgroundImage:
-                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/about.png')",
+                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme5.jpg')",
             }}
           >
-            <div className={'text-[36px] font-normal'}>NOTICE</div>
+            <div className={'text-[36px] font-normal'}>Select</div>
             <Space y={8} />
             <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
           </div>
@@ -147,10 +165,10 @@ export default function Desktop() {
             className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start`}
             style={{
               backgroundImage:
-                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/btn_faq.png')",
+                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme6.jpg')",
             }}
           >
-            <div className={'text-[36px] font-normal'}>FAQ</div>
+            <div className={'text-[36px] font-normal'}>Brainstorming</div>
             <Space y={8} />
             <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
           </div>

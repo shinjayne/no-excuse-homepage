@@ -16,7 +16,7 @@ export function WhiteButton({children} : PropsWithChildren) {
   return (
     <div
       className={
-        'border-solid border-[1px] rounded-[4px] border-[#222222] py-2.5 px-6 text-[14px] font-bold cursor-pointer'
+        'border-solid border-[1px] rounded-[4px] border-[#222222] py-2.5 px-6 text-[14px] font-bold cursor-pointer flex justify-center'
       }
     >
       {children}

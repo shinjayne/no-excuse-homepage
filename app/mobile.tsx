@@ -1,63 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useWindowScrollPositions } from '@/lib/useWindowScrollPositions'
 import { useWindowSize } from '@react-hooks-library/core'
 import { GreenButton } from '@/components/Button'
 import Space from '@/components/Space'
-import {
-  Navbar,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-} from '@nextui-org/react'
+import { Navigation } from '@/components/Navigation'
 import Link from 'next/link'
-import { NavbarBrand } from '@nextui-org/navbar'
+import { useRouter } from 'next/navigation'
 
 export default function MobileHome() {
   const scrollPositions = useWindowScrollPositions()
   const windowSize = useWindowSize()
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
 
   return (
     <div className={'flex flex-col h-[300vh]'}>
-      <Navbar height={'2.5rem'} onMenuOpenChange={setIsMenuOpen}>
-        <NavbarContent>
-          <NavbarMenuToggle
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            className="sm:hidden"
-          />
-        </NavbarContent>
-        <NavbarContent justify="center">
-          <NavbarBrand style={{ width: '150px' }}>
-            <img src={'/logo33.png'} />
-          </NavbarBrand>
-          <NavbarItem>
-            {/*<Button as={Link} color="primary" href="#" variant="flat">*/}
-            {/*  Sign Up*/}
-            {/*</Button>*/}
-          </NavbarItem>
-        </NavbarContent>
-        <NavbarContent justify={'end'}></NavbarContent>
-        <NavbarMenu>
-          <NavbarMenuItem key={`1-shop`}>
-            <Link color={'primary'} className="w-full" href="#">
-              Shop
-            </Link>
-          </NavbarMenuItem>
-          <NavbarMenuItem key={`2-about`}>
-            <Link color={'primary'} className="w-full" href="#">
-              About
-            </Link>
-          </NavbarMenuItem>
-          <NavbarMenuItem key={`3-notice`}>
-            <Link color={'primary'} className="w-full" href="#">
-              Notice
-            </Link>
-          </NavbarMenuItem>
-        </NavbarMenu>
-      </Navbar>
+      <Navigation />
       <div
         className={'sticky top-0 z-10 flex flex-row h-[100vh] min-h-[100vh]'}
       >
@@ -90,6 +48,9 @@ export default function MobileHome() {
                 borderImageSlice: '4% 4% 4% 4%',
                 cursor: 'pointer',
               }}
+              onClick={() => {
+                router.push('/product/1')
+              }}
               // src={'frame_1.png'}
               // className={`w-[]`}
               // className={'absolute top-0 right-0'}
@@ -110,7 +71,9 @@ export default function MobileHome() {
               NO,EXCUSE SELECT 24S/S
             </div>
             <Space y={20} />
-            <GreenButton>Go to Detail</GreenButton>
+            <Link href={'/product/1'}>
+              <GreenButton>Go to Detail</GreenButton>
+            </Link>
           </div>
         </div>
       </div>
@@ -125,7 +88,7 @@ export default function MobileHome() {
               "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/btn_shop.png')",
           }}
         >
-          <div className={'text-[36px] font-normal'}>SHOP</div>
+          <div className={'text-[36px] font-normal'}>Exhibition</div>
           <Space y={8} />
           <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
         </div>
@@ -137,7 +100,7 @@ export default function MobileHome() {
                 "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/about.png')",
             }}
           >
-            <div className={'text-[36px] font-normal'}>NOTICE</div>
+            <div className={'text-[36px] font-normal'}>Select</div>
             <Space y={8} />
             <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
           </div>
@@ -148,7 +111,7 @@ export default function MobileHome() {
                 "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/btn_faq.png')",
             }}
           >
-            <div className={'text-[36px] font-normal'}>FAQ</div>
+            <div className={'text-[36px] font-normal'}>Brainstorming</div>
             <Space y={8} />
             <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
           </div>

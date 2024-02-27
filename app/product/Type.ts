@@ -1,0 +1,1 @@
+export type ProductIdProps<T = unknown> = T & { params: { productId: number } }
