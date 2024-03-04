@@ -16,23 +16,23 @@ export default function ProductDetail({
       <div className={'w-full'}>
         <Navigation />
         <div className={'flex flex-col w-full text-black items-center'}>
-          <Carousel className={'max-w-[400px] w-full'}>
+          <Carousel className={'max-w-[400px] w-screen'}>
             <img
               src={'/post/photo1.jpeg'}
               className={
-                'object-cover w-full h-[80vh] max-w-[400px] max-h-[800px]'
+                'object-cover w-screen h-[80vh] max-w-[400px] max-h-[800px]'
               }
             />
             <img
               src={'/post/photo1.jpeg'}
               className={
-                'object-cover w-full h-[80vh] max-w-[400px] max-h-[800px]'
+                'object-cover w-screen h-[80vh] max-w-[400px] max-h-[800px]'
               }
             />
             <img
               src={'/post/photo1.jpeg'}
               className={
-                'object-cover w-full h-[80vh] max-w-[400px] max-h-[800px]'
+                'object-cover w-screen h-[80vh] max-w-[400px] max-h-[800px]'
               }
             />
           </Carousel>
