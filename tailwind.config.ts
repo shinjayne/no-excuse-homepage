@@ -15,8 +15,18 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(50%)' },
+          '100%': { transform: 'translateX(-80%)' },
+        },
+      },
+      animation: {
+        slide: 'slide 30s linear infinite',
+      },
     },
   },
+
   darkMode: 'class',
   plugins: [nextui()],
 }

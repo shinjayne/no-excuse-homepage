@@ -24,7 +24,7 @@ export default function DesktopV3() {
   return (
     <div className={'flex flex-col'}>
       <Navigation />
-      <div className={'flex flex-row h-[60vw] min-h-[900px]'}>
+      <div className={'flex flex-row h-[80vh]'}>
         <div
           style={{
             width: `100%`,
@@ -32,7 +32,7 @@ export default function DesktopV3() {
           className={`relative bg-[url('/main_bg2.JPEG')] bg-cover bg bg-center h-full p-3`}
         >
           <div
-            className={'flex flex-col justify-center items-center pt-32'}
+            className={'flex flex-col justify-start items-center'}
             style={{
               width: `100%`,
 
@@ -42,7 +42,7 @@ export default function DesktopV3() {
             // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
           >
             <img
-              src={'/post/post2.JPEG'}
+              src={'/post/bookshelf.jpg'}
               style={{
                 height: '35vh',
                 // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
@@ -57,10 +57,12 @@ export default function DesktopV3() {
                 cursor: 'pointer',
                 marginBottom: '32px',
                 position: 'relative',
-                top: '80px',
+                top: '16vh',
               }}
               onClick={() => {
-                router.push('/product/1')
+                router.push(
+                  'https://www.sixshop.com/no-excuse/product/f6aa788f-64fe-47ea-aad1-18b29d0d58b3-10',
+                )
               }}
               // src={'frame_1.png'}
               // className={`w-[]`}
@@ -69,20 +71,20 @@ export default function DesktopV3() {
             />
             <div
               className={
-                'flex flex-row justify-center items-center w-full relative z-10 bottom-20'
+                'flex flex-row justify-center items-center w-full absolute bottom-[0px] z-10'
               }
             >
               <img
                 src={'/p/p2-removebg-preview.png'}
-                className={'object-cover h-[35vw] mr-[8vw]'}
+                className={'object-cover h-[50vw] max-h-[450px] mr-[8vw]'}
               />
               <img
                 src={'/p/p1-removebg-preview.png'}
-                className={'object-cover h-[35vw] mr-[24vw]'}
+                className={'object-cover h-[50vw] max-h-[450px] mr-[24vw]'}
               />
               <img
                 src={'/p/p3-removebg-preview.png'}
-                className={'object-cover h-[35vw]'}
+                className={'object-cover h-[50vw] max-h-[450px]'}
               />
             </div>
           </div>
@@ -93,14 +95,15 @@ export default function DesktopV3() {
       {/*</div>*/}
       <div
         className={
-          'flex flex-col justify-center items-center py-10 gap-4 font-light text-medium  text-center'
+          'flex flex-col justify-center items-center py-2 font-light text-medium  text-start bg-black text-white'
         }
       >
-        <div>NO EXCUSE, NO SURRENDER.</div>
-        <div>In every moment, choose to stand out; refuse to blend in.</div>
-        <div>
-          Our threads are for those who speak boldly—No Thanks, EXCUSE not
-          needed.
+        <div className={'animate-slide w-[2400px] font-light text-sm'}>
+          NO EXCUSE, NO SURRENDER. In every moment, choose to stand out; refuse
+          to blend in. Our threads are for those who speak boldly—No Thanks,
+          EXCUSE not needed. NO EXCUSE, NO SURRENDER. In every moment, choose to
+          stand out; refuse to blend in. Our threads are for those who speak
+          boldly—No Thanks, EXCUSE not needed.
         </div>
       </div>
       <div className={'min-h-screen flex flex-row'}>

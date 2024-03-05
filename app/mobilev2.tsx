@@ -24,7 +24,7 @@ export default function MobileV2() {
   return (
     <div className={'flex flex-col'}>
       <Navigation />
-      <div className={'flex flex-row h-[100vh] min-h-[100vh]'}>
+      <div className={'flex flex-row h-[80vh]'}>
         <div
           style={{
             width: `100%`,
@@ -42,12 +42,12 @@ export default function MobileV2() {
             // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
           >
             <img
-              src={'/post/post2.JPEG'}
+              src={'/post/bookshelf.jpg'}
               style={{
-                height: '35vh',
+                // height: '35vh',
                 // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
                 // maxHeight: '80vh',
-                // maxWidth: '60%',
+                maxWidth: '70%',
                 // width: `${45 + (scrollPositions.scrollY / 100) * 15}%`,
                 borderImageSource: 'url("/photoframe.webp")',
                 borderImageWidth: '10px',
@@ -56,11 +56,13 @@ export default function MobileV2() {
                 borderImageSlice: '4% 4% 4% 4%',
                 cursor: 'pointer',
                 marginBottom: '32px',
-                position: 'relative',
-                top: '80px',
+                position: 'absolute',
+                top: '20vh',
               }}
               onClick={() => {
-                router.push('/product/1')
+                router.push(
+                  'https://www.sixshop.com/no-excuse/product/f6aa788f-64fe-47ea-aad1-18b29d0d58b3-10',
+                )
               }}
               // src={'frame_1.png'}
               // className={`w-[]`}
@@ -69,7 +71,7 @@ export default function MobileV2() {
             />
             <div
               className={
-                'flex flex-row justify-center items-center w-full relative z-10 bottom-5'
+                'flex flex-row justify-center items-center w-full absolute bottom-[10vh] z-10'
               }
             >
               <img
@@ -86,39 +88,22 @@ export default function MobileV2() {
               />
             </div>
           </div>
-          {/*<div*/}
-          {/*  style={{*/}
-          {/*    opacity: `${Math.min((scrollPositions.scrollY / windowSize.height) * 100, 100)}%`,*/}
-          {/*  }}*/}
-          {/*  className={`absolute z-10 bottom-0 left-0 w-[100vw]  flex flex-col items-end justify-end pb-10 px-12 bg-gradient-to-t from-[#000000] to-[rgba(34, 34, 34, 0)] text-white`}*/}
-          {/*>*/}
-          {/*  <div className={'font-normal text-[24px] text-right'}>*/}
-          {/*    WASHED RELAXED HOOD ZIP UP*/}
-          {/*  </div>*/}
-          {/*  <Space y={12} />*/}
-          {/*  <div className={'font-extralight text-[11px] text-right'}>*/}
-          {/*    NO,EXCUSE SELECT 24S/S*/}
-          {/*  </div>*/}
-          {/*  <Space y={20} />*/}
-          {/*  <Link href={'/product/1'}>*/}
-          {/*    <GreenButton>Go to Detail</GreenButton>*/}
-          {/*  </Link>*/}
-          {/*</div>*/}
         </div>
       </div>
-      {/*<div className={'bg-black min-h-[200vh]'}>*/}
       {/*  /!*  DO NOTHING, just for spacing *!/*/}
+      {/*<div className={'bg-black min-h-[200vh]'}>*/}
       {/*</div>*/}
       <div
         className={
-          'flex flex-col justify-center items-center py-10 gap-4 font-light text-medium text-center'
+          'flex flex-col justify-center items-center py-2 font-light text-medium  text-start bg-black text-white'
         }
       >
-        <div>NO EXCUSE, NO SURRENDER.</div>
-        <div>In every moment, choose to stand out; refuse to blend in.</div>
-        <div>
-          Our threads are for those who speak boldly—No Thanks, EXCUSE not
-          needed.
+        <div className={'animate-slide w-[2400px] font-light text-sm'}>
+          NO EXCUSE, NO SURRENDER. In every moment, choose to stand out; refuse
+          to blend in. Our threads are for those who speak boldly—No Thanks,
+          EXCUSE not needed. NO EXCUSE, NO SURRENDER. In every moment, choose to
+          stand out; refuse to blend in. Our threads are for those who speak
+          boldly—No Thanks, EXCUSE not needed.
         </div>
       </div>
       <div className={'min-h-screen flex flex-row'}>
