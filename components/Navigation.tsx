@@ -11,6 +11,7 @@ import {
 import { NavbarBrand } from '@nextui-org/navbar'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import MenuList from '@/app/menu'
 
 export function Navigation(props: {}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,21 +36,13 @@ export function Navigation(props: {}) {
       </NavbarContent>
       <NavbarContent justify={'end'}></NavbarContent>
       <NavbarMenu>
-        <NavbarMenuItem key={'shop'}>
-          <Link color={'primary'} className="w-full" href="#">
-            Exhibition
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem key={'about'}>
-          <Link color={'primary'} className="w-full" href="#">
-            Select
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem key={'notice'}>
-          <Link color={'primary'} className="w-full" href="#">
-            BrainStorming
-          </Link>
-        </NavbarMenuItem>
+        {MenuList.map((menuItem) => (
+          <NavbarMenuItem key={menuItem.title}>
+            <Link color={'primary'} className="w-full" href={menuItem.link}>
+              {menuItem.title}
+            </Link>
+          </NavbarMenuItem>
+        ))}
       </NavbarMenu>
     </Navbar>
   )

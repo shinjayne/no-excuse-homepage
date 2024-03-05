@@ -6,6 +6,7 @@ import Space from '@/components/Space'
 import { Navigation } from '@/components/Navigation'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { BRAINSTORMING, EXHIBITION, SELECT } from '@/app/menu'
 
 export default function MobileHome() {
   const scrollPositions = useWindowScrollPositions()
@@ -23,7 +24,7 @@ export default function MobileHome() {
           style={{
             width: `100%`,
           }}
-          className={`relative bg-[url('/main_bg1.png')] bg-cover bg bg-center h-full p-3`}
+          className={`relative bg-[url('/wall_m.jpg')] bg-cover bg bg-center h-full p-3`}
         >
           <div
             className={
@@ -47,6 +48,8 @@ export default function MobileHome() {
                 borderImageRepeat: 'repeat',
                 borderImageSlice: '4% 4% 4% 4%',
                 cursor: 'pointer',
+                position: 'relative',
+                bottom: '80px',
               }}
               onClick={() => {
                 router.push('/product/1')
@@ -81,40 +84,42 @@ export default function MobileHome() {
         {/*  DO NOTHING, just for spacing */}
       </div>
       <div className={'sticky top-0 z-10 min-h-screen flex flex-row'}>
-        <div
+        <Link
+          href={EXHIBITION.link}
           className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-end items-end overflow-hidden break-all`}
           style={{
-            backgroundImage:
-              "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme1.jpeg')",
+            backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${EXHIBITION.imageUrl}')`,
           }}
         >
-          <div className={'text-[30px] font-normal'}>Exhibition</div>
+          <div className={'text-[30px] font-normal'}>{EXHIBITION.title}</div>
           <Space y={8} />
           <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
-        </div>
+        </Link>
         <div className={'w-1/2 flex flex-col '}>
-          <div
+          <Link
+            href={SELECT.link}
             className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start overflow-hidden break-all`}
             style={{
-              backgroundImage:
-                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme5.jpg')",
+              backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${SELECT.imageUrl}')`,
             }}
           >
-            <div className={'text-[30px] font-normal'}>Select</div>
+            <div className={'text-[30px] font-normal'}>{SELECT.title}</div>
             <Space y={8} />
             <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
-          </div>
-          <div
+          </Link>
+          <Link
+            href={BRAINSTORMING.link}
             className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start overflow-hidden break-all`}
             style={{
-              backgroundImage:
-                "linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('/post/theme6.jpg')",
+              backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${BRAINSTORMING.imageUrl}')`,
             }}
           >
-            <div className={'text-[30px] font-normal'}>Brainstorming</div>
+            <div className={'text-[30px] font-normal'}>
+              {BRAINSTORMING.title}
+            </div>
             <Space y={8} />
             <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
-          </div>
+          </Link>
         </div>
       </div>
       <div
