@@ -1,10 +1,10 @@
 'use client'
 
 import { useWindowSize } from '@react-hooks-library/core'
-import DesktopHome from '@/app/desktop'
 import MobileHome from '@/app/mobile'
 
 import { NextUIProvider } from '@nextui-org/react'
+import DesktopV2 from '@/app/desktopv2'
 
 export default function Home() {
   const windowSize = useWindowSize()
@@ -13,7 +13,7 @@ export default function Home() {
     console.log('desktop loaded')
     return (
       <NextUIProvider>
-        <DesktopHome />
+        <DesktopV2 />
       </NextUIProvider>
     )
   } else {

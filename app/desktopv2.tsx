@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { BRAINSTORMING, EXHIBITION, SELECT } from '@/app/menu'
 import { Navigation } from '@/components/Navigation'
 
-export default function Desktop() {
+export default function DesktopV2() {
   const box = useRef<HTMLDivElement | null>(null)
   const [scroll, setScroll] = useState({ x: 0, y: 0 })
   const scrollPositions = useWindowScrollPositions()
@@ -28,99 +28,39 @@ export default function Desktop() {
       <div
         className={'sticky top-0 z-10 flex flex-row h-[100vh] min-h-[100vh]'}
       >
-        {/*<div*/}
-        {/*  className={`bg-white h-full flex flex-col items-end justify-between text-black`}*/}
-        {/*  style={{*/}
-        {/*    width: `${20 - Math.min(100, scrollPositions.scrollY / windowSize.height) * 20}%`,*/}
-        {/*    minWidth: 0,*/}
-        {/*  }}*/}
-        {/*>*/}
-        {/*  <div className={'flex flex-col items-end'}>*/}
-        {/*    <div className={'flex flex-col items-end gap-6 mr-6 mt-14'}>*/}
-        {/*      <div className={'cursor-pointer hover:text-gray-300'}>*/}
-        {/*        Exhibition*/}
-        {/*      </div>*/}
-        {/*      <div className={'cursor-pointer hover:text-gray-300'}>Select</div>*/}
-        {/*      <div className={'cursor-pointer hover:text-gray-300'}>*/}
-        {/*        Brainstorming*/}
-        {/*      </div>*/}
-        {/*      <div className={'cursor-pointer hover:text-gray-300'}>FAQ</div>*/}
-        {/*    </div>*/}
-        {/*    <div*/}
-        {/*      className={*/}
-        {/*        'w-7 border-t-[1px] border-solid border-[#999999] mr-6 mt-8 mb-4'*/}
-        {/*      }*/}
-        {/*    ></div>*/}
-        {/*    <div className={'flex flex-row mr-6 ml-6 gap-1.5'}>*/}
-        {/*      <img src={'/person.png'} className={'size-6 cursor-pointer'} />*/}
-        {/*      <img src={'/cart.png'} className={'size-6 cursor-pointer'} />*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*  <div className={'flex flex-col items-end mr-6 ml-5'}>*/}
-        {/*    <img src={'/logo33.png'} className={'max-h-10 mb-3 w-fit'} />*/}
-        {/*    <div*/}
-        {/*      className={*/}
-        {/*        'font-extralight text-[16px] text-right mb-5 min-w-fit max-w-full'*/}
-        {/*      }*/}
-        {/*    >*/}
-        {/*      NO EXCUSE, NO SURRENDER. In every moment, choose to stand out;*/}
-        {/*      refuse to blend in. Our threads are for those who speak boldly—No*/}
-        {/*      Thanks, EXCUSE not needed.*/}
-        {/*    </div>*/}
-        {/*    <div className={'flex flex-row mb-14 hidden'}>*/}
-        {/*      <WhiteButton>ABOUT US</WhiteButton>*/}
-        {/*      <Space x={16} />*/}
-        {/*      <GreenButton>SHOP NOW</GreenButton>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
         <div
           style={{
-            // width: `${80 + (scrollPositions.scrollY / 100) * 20}%`,
-            width: '100%',
+            width: `100%`,
           }}
           className={`relative bg-[url('/wall.jpg')] bg-cover bg bg-center h-full p-3`}
         >
-          <div
-            style={{
-              opacity: `${Math.min((scrollPositions.scrollY / windowSize.height) * 100, 100)}%`,
-            }}
-            className={`absolute z-10 top-0 left-0 flex flex-col items-end justify-end w-[30vw] h-full pb-32 px-12 bg-gradient-to-r from-[#000000a1] to-[rgba(34, 34, 34, 0)] text-white`}
-          >
-            <div className={'font-normal text-[36px] text-right'}>
-              WASHED RELAXED HOOD ZIP UP
-            </div>
-            <Space y={12} />
-            <div className={'font-extralight text-[18px] text-right'}>
-              NO,EXCUSE SELECT 24S/S
-            </div>
-            <Space y={20} />
-            <Link href={'/product/1'}>
-              <GreenButton>Go to Detail</GreenButton>
-            </Link>
-          </div>
           <div
             className={
               'absolute top-0 right-0 flex flex-row justify-center items-center'
             }
             style={{
-              width: '100%',
-              maxWidth: '75vw',
-              height: `${80 + (scrollPositions.scrollY / 100) * 20}%`,
-              maxHeight: '100%',
+              width: `100%`,
+              height: `${80 + (scrollPositions.scrollY / 100) * 10}%`,
+              maxHeight: '90%',
             }}
+            // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
           >
             <img
               src={'/post/post2.JPEG'}
               style={{
-                height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
+                height: '35vh',
+                // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
                 maxHeight: '80vh',
+                // maxWidth: '60%',
+                // width: `${45 + (scrollPositions.scrollY / 100) * 15}%`,
                 borderImageSource: 'url("/photoframe.webp")',
                 borderImageWidth: '10px',
                 borderWidth: '10px',
                 borderImageRepeat: 'repeat',
                 borderImageSlice: '4% 4% 4% 4%',
                 cursor: 'pointer',
+                position: 'relative',
+                bottom: '80px',
               }}
               onClick={() => {
                 router.push('/product/1')
@@ -130,6 +70,24 @@ export default function Desktop() {
               // className={'absolute top-0 right-0'}
               // style={{ width: `${(scrollPositions.scrollY / 100) * 90}%` }}
             />
+          </div>
+          <div
+            style={{
+              opacity: `${Math.min((scrollPositions.scrollY / windowSize.height) * 100, 100)}%`,
+            }}
+            className={`absolute z-10 bottom-0 left-0 w-[100vw]  flex flex-col items-end justify-end pb-10 px-12 bg-gradient-to-t from-[#000000] to-[rgba(34, 34, 34, 0)] text-white`}
+          >
+            <div className={'font-normal text-[24px] text-right'}>
+              WASHED RELAXED HOOD ZIP UP
+            </div>
+            <Space y={12} />
+            <div className={'font-extralight text-[11px] text-right'}>
+              NO,EXCUSE SELECT 24S/S
+            </div>
+            <Space y={20} />
+            <Link href={'/product/1'}>
+              <GreenButton>Go to Detail</GreenButton>
+            </Link>
           </div>
         </div>
       </div>
