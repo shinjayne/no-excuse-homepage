@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { BRAINSTORMING, EXHIBITION, SELECT } from '@/app/menu'
 import { Navigation } from '@/components/Navigation'
 
-export default function DesktopV2() {
+export default function MobileV2() {
   const box = useRef<HTMLDivElement | null>(null)
   const [scroll, setScroll] = useState({ x: 0, y: 0 })
   const scrollPositions = useWindowScrollPositions()
@@ -29,15 +29,13 @@ export default function DesktopV2() {
           style={{
             width: `100%`,
           }}
-          className={`relative bg-[url('/wall.jpg')] bg-cover bg bg-center h-full p-3`}
+          className={`relative bg-[url('/main_bg2.JPEG')] bg-cover bg bg-center h-full p-3`}
         >
           <div
-            className={
-              'absolute top-0 right-0 flex flex-row justify-center items-center'
-            }
+            className={'flex flex-col justify-center items-center pt-32'}
             style={{
               width: `100%`,
-              height: '80%',
+
               // height: `${80 + (scrollPositions.scrollY / 100) * 10}%`,
               // maxHeight: '90%',
             }}
@@ -48,7 +46,7 @@ export default function DesktopV2() {
               style={{
                 height: '35vh',
                 // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
-                maxHeight: '80vh',
+                // maxHeight: '80vh',
                 // maxWidth: '60%',
                 // width: `${45 + (scrollPositions.scrollY / 100) * 15}%`,
                 borderImageSource: 'url("/photoframe.webp")',
@@ -57,8 +55,9 @@ export default function DesktopV2() {
                 borderImageRepeat: 'repeat',
                 borderImageSlice: '4% 4% 4% 4%',
                 cursor: 'pointer',
+                marginBottom: '32px',
                 position: 'relative',
-                bottom: '80px',
+                top: '80px',
               }}
               onClick={() => {
                 router.push('/product/1')
@@ -68,6 +67,24 @@ export default function DesktopV2() {
               // className={'absolute top-0 right-0'}
               // style={{ width: `${(scrollPositions.scrollY / 100) * 90}%` }}
             />
+            <div
+              className={
+                'flex flex-row justify-center items-center w-full relative z-10 bottom-5'
+              }
+            >
+              <img
+                src={'/p/p2-removebg-preview.png'}
+                className={'object-cover h-[58vw] mr-[4vw]'}
+              />
+              <img
+                src={'/p/p1-removebg-preview.png'}
+                className={'object-cover h-[58vw] mr-[20vw]'}
+              />
+              <img
+                src={'/p/p3-removebg-preview.png'}
+                className={'object-cover h-[58vw]'}
+              />
+            </div>
           </div>
           {/*<div*/}
           {/*  style={{*/}
@@ -92,10 +109,17 @@ export default function DesktopV2() {
       {/*<div className={'bg-black min-h-[200vh]'}>*/}
       {/*  /!*  DO NOTHING, just for spacing *!/*/}
       {/*</div>*/}
-      <div className={'flex flex-row justify-center h-[500px] py-24 gap-16'}>
-        <img src={'/p/p1.jpeg'} className={'object-cover h-full'} />
-        <img src={'/p/p2.jpeg'} className={'object-cover h-full'} />
-        <img src={'/p/p3.jpeg'} className={'object-cover h-full'} />
+      <div
+        className={
+          'flex flex-col justify-center items-center py-10 gap-4 font-light text-medium text-center'
+        }
+      >
+        <div>NO EXCUSE, NO SURRENDER.</div>
+        <div>In every moment, choose to stand out; refuse to blend in.</div>
+        <div>
+          Our threads are for those who speak boldly—No Thanks, EXCUSE not
+          needed.
+        </div>
       </div>
       <div className={'min-h-screen flex flex-row'}>
         <Link
