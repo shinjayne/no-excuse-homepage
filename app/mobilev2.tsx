@@ -95,7 +95,7 @@ export default function MobileV2() {
       {/*</div>*/}
       <div
         className={
-          'flex flex-col justify-center items-center py-2 font-light text-medium  text-start bg-black text-white'
+          'flex flex-col justify-center items-center py-2 font-light text-medium  text-start bg-black text-white overflow-hidden'
         }
       >
         <div className={'animate-slide w-[2400px] font-light text-sm'}>
