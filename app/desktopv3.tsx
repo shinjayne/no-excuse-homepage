@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from 'react'
 import { useScroll } from '@react-hooks-library/core'
-import Space from '@/components/Space'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { BRAINSTORMING, EXHIBITION, SELECT } from '@/app/menu'
@@ -43,7 +42,7 @@ export default function DesktopV3() {
             <img
               src={artUrl}
               style={{
-                height: '45vh',
+                height: '50vh',
                 // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
                 // maxHeight: '80vh',
                 // maxWidth: '60%',
@@ -106,39 +105,55 @@ export default function DesktopV3() {
       <div className={'min-h-screen flex flex-row'}>
         <Link
           href={EXHIBITION.link}
-          className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-end items-end overflow-hidden break-all`}
+          className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all`}
           style={{
             backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${EXHIBITION.imageUrl}')`,
           }}
         >
-          <div className={'text-[30px] font-normal'}>{EXHIBITION.title}</div>
-          <Space y={8} />
-          <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
+          <div
+            className={
+              'text-[24px] font-medium border-b-3 border-solid border-white px-2 py-1'
+            }
+          >
+            {EXHIBITION.title.toUpperCase()}
+          </div>
+          {/*<Space y={8} />*/}
+          {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
         </Link>
-        <div className={'w-1/2 flex flex-col '}>
+        <div className={'w-1/2 flex flex-col'}>
           <Link
             href={SELECT.link}
-            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start overflow-hidden break-all`}
+            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
             style={{
               backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${SELECT.imageUrl}')`,
             }}
           >
-            <div className={'text-[30px] font-normal'}>{SELECT.title}</div>
-            <Space y={8} />
-            <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
+            <div
+              className={
+                'text-[24px] font-medium border-b-3 border-solid border-white px-2 py-1'
+              }
+            >
+              {SELECT.title.toUpperCase()}
+            </div>
+            {/*<Space y={8} />*/}
+            {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
           </Link>
           <Link
             href={BRAINSTORMING.link}
-            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-end items-start overflow-hidden break-all`}
+            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
             style={{
               backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${BRAINSTORMING.imageUrl}')`,
             }}
           >
-            <div className={'text-[30px] font-normal'}>
-              {BRAINSTORMING.title}
+            <div
+              className={
+                'text-[24px] font-medium border-b-3 border-solid border-white px-2 py-1'
+              }
+            >
+              {BRAINSTORMING.title.toUpperCase()}
             </div>
-            <Space y={8} />
-            <div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>
+            {/*<Space y={8} />*/}
+            {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
           </Link>
         </div>
       </div>

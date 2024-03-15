@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-const ArtList = [
+export const ArtList = [
   '/art/main1.jpeg',
   '/art/main2.jpeg',
   '/art/main3.jpeg',
   '/art/main4.jpeg',
-  '/art/main5.jpeg',
+  // '/art/main5.jpeg',
   '/art/main6.png',
   '/art/main7.jpeg',
   '/art/main8.jpeg',
@@ -16,7 +16,7 @@ const ArtList = [
 ]
 
 function pickRandomArt(): string {
-  const randomIndex = Math.round(Math.random() * 100) % 12
+  const randomIndex = Math.round(Math.random() * 100) % 11
   const result = ArtList[randomIndex]
   console.log(`pickRandomArt : [${randomIndex}] ${result}`)
   return result
