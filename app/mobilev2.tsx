@@ -1,19 +1,19 @@
 'use client'
 
 import React, { useRef, useState } from 'react'
-import { useScroll, useWindowSize } from '@react-hooks-library/core'
-import { useWindowScrollPositions } from '@/lib/useWindowScrollPositions'
+import { useScroll } from '@react-hooks-library/core'
 import Space from '@/components/Space'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { BRAINSTORMING, EXHIBITION, SELECT } from '@/app/menu'
 import { Navigation } from '@/components/Navigation'
+import usePickRandomArt from '@/app/artlist'
+import { Simulate } from 'react-dom/test-utils'
 
 export default function MobileV2() {
   const box = useRef<HTMLDivElement | null>(null)
   const [scroll, setScroll] = useState({ x: 0, y: 0 })
-  const scrollPositions = useWindowScrollPositions()
-  const windowSize = useWindowSize()
+  const [artUrl, changeArt] = usePickRandomArt()
 
   useScroll(box, ({ scrollX, scrollY }) =>
     setScroll({ x: scrollX, y: scrollY }),
@@ -42,7 +42,7 @@ export default function MobileV2() {
             // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
           >
             <img
-              src={'/post/bookshelf.jpg'}
+              src={artUrl}
               style={{
                 // height: '35vh',
                 // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
@@ -60,9 +60,7 @@ export default function MobileV2() {
                 top: '20vh',
               }}
               onClick={() => {
-                router.push(
-                  'https://www.sixshop.com/no-excuse/product/f6aa788f-64fe-47ea-aad1-18b29d0d58b3-10',
-                )
+                changeArt()
               }}
               // src={'frame_1.png'}
               // className={`w-[]`}
