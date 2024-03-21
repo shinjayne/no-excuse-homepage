@@ -17,6 +17,8 @@ export default function DesktopV3() {
     setScroll({ x: scrollX, y: scrollY }),
   )
 
+  console.log(`DesktopV3 : ${artUrl}`)
+
   const router = useRouter()
 
   return (
@@ -41,6 +43,7 @@ export default function DesktopV3() {
           >
             <img
               src={artUrl}
+              key={artUrl}
               style={{
                 height: '50vh',
                 // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
