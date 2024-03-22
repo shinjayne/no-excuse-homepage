@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { BRAINSTORMING, EXHIBITION, SELECT } from '@/app/menu'
 import { Navigation } from '@/components/Navigation'
 import usePickRandomArt from '@/app/artlist'
+import FooterContent from '@/app/footer'
 
 export default function MobileV2() {
   const box = useRef<HTMLDivElement | null>(null)
@@ -159,12 +160,12 @@ export default function MobileV2() {
       </div>
       <div
         className={
-          'w-full flex flex-col items-end gap-2 h-[320px] bg-white p-10 text-gray-600'
+          'w-full flex flex-col items-center gap-2 h-[320px] bg-white pt-20  pb-10 px-10'
         }
       >
-        <div>NO, EXCUSE</div>
-        <div>Contact : 01051336385</div>
-        <div> Email : shinjayne@gmail.com</div>
+        <div className={'text-xs text-gray-500 text-center'}>
+          {FooterContent}
+        </div>
       </div>
     </div>
   )
