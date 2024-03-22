@@ -166,6 +166,11 @@ export default function DesktopV3() {
           'w-full flex flex-col items-center gap-2 bg-white pt-20  pb-10 px-10'
         }
       >
+        <div className={'text-xs font-medium flex flex-col items-center mb-5'}>
+          <div>CUSTOMER SERVICE</div>
+          <div>no-excuse-shop@naver.com</div>
+          <div>010-5133-6385</div>
+        </div>
         <div className={'text-xs text-gray-500 text-center'}>
           {FooterContent}
         </div>
