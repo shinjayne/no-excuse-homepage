@@ -5,13 +5,13 @@ export type MenuItem = {
 }
 
 export const SELECT : MenuItem = {
-  title : 'Select',
+  title : 'Shop/Select',
   link : 'https://www.sixshop.com/no-excuse/select',
   imageUrl : '/post/theme5.jpg'
 }
 
 export const EXHIBITION :  MenuItem = {
-  title: 'Exhibition',
+  title: 'Shop/Exhibition',
   link : 'https://www.sixshop.com/no-excuse/exhibition',
   imageUrl : '/post/theme1.jpeg'
 }
