@@ -46,7 +46,7 @@ export default function DesktopV3() {
               src={artUrl}
               key={artUrl}
               style={{
-                height: '50vh',
+                height: '30vh',
                 // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
                 // maxHeight: '80vh',
                 // maxWidth: '60%',
@@ -170,6 +170,7 @@ export default function DesktopV3() {
           <div>CUSTOMER SERVICE</div>
           <div>no-excuse-shop@naver.com</div>
           <div>010-5133-6385</div>
+          <div>평일 10:00 ~ 18:00 | 주말 및 공휴일 휴무</div>
         </div>
         <div className={'text-xs text-gray-500 text-center'}>
           {FooterContent}
