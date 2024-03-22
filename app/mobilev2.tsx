@@ -103,10 +103,10 @@ export default function MobileV2() {
           boldly—No Thanks, EXCUSE not needed.
         </div>
       </div>
-      <div className={'min-h-screen flex flex-row'}>
+      <div className={'flex flex-col'}>
         <Link
           href={EXHIBITION.link}
-          className={`w-1/2 bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all`}
+          className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all`}
           style={{
             backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${EXHIBITION.imageUrl}')`,
           }}
@@ -121,42 +121,41 @@ export default function MobileV2() {
           {/*<Space y={8} />*/}
           {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
         </Link>
-        <div className={'w-1/2 flex flex-col '}>
-          <Link
-            href={SELECT.link}
-            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
-            style={{
-              backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${SELECT.imageUrl}')`,
-            }}
+
+        <Link
+          href={SELECT.link}
+          className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
+          style={{
+            backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${SELECT.imageUrl}')`,
+          }}
+        >
+          <div
+            className={
+              'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'
+            }
           >
-            <div
-              className={
-                'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'
-              }
-            >
-              {SELECT.title.toUpperCase()}
-            </div>
-            {/*<Space y={8} />*/}
-            {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
-          </Link>
-          <Link
-            href={BRAINSTORMING.link}
-            className={`h-1/2 bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
-            style={{
-              backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${BRAINSTORMING.imageUrl}')`,
-            }}
+            {SELECT.title.toUpperCase()}
+          </div>
+          {/*<Space y={8} />*/}
+          {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
+        </Link>
+        <Link
+          href={BRAINSTORMING.link}
+          className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
+          style={{
+            backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${BRAINSTORMING.imageUrl}')`,
+          }}
+        >
+          <div
+            className={
+              'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'
+            }
           >
-            <div
-              className={
-                'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'
-              }
-            >
-              {BRAINSTORMING.title.toUpperCase()}
-            </div>
-            {/*<Space y={8} />*/}
-            {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
-          </Link>
-        </div>
+            {BRAINSTORMING.title.toUpperCase()}
+          </div>
+          {/*<Space y={8} />*/}
+          {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
+        </Link>
       </div>
       <div
         className={
