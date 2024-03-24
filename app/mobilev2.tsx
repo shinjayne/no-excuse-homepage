@@ -68,20 +68,20 @@ export default function MobileV2() {
             />
             <div
               className={
-                'flex flex-row justify-center items-center w-full absolute bottom-[10vh] z-10'
+                'flex flex-row justify-center items-end w-full absolute bottom-[10vh] z-10'
               }
             >
               <img
-                src={'/p/p2-removebg-preview.png'}
-                className={'object-cover h-[58vw] mr-[4vw]'}
+                src={'/standing/standing001.png'}
+                className={'object-cover h-[66vw] mr-[10vw]'}
               />
               <img
-                src={'/p/p1-removebg-preview.png'}
-                className={'object-cover h-[58vw] mr-[20vw]'}
+                src={'/standing/standing006.png'}
+                className={'object-cover h-[65vw] mr-[8vw]'}
               />
               <img
-                src={'/p/p3-removebg-preview.png'}
-                className={'object-cover h-[58vw]'}
+                src={'/standing/standing005.png'}
+                className={'object-cover h-[48vw]'}
               />
             </div>
           </div>
