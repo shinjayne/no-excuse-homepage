@@ -17,13 +17,13 @@ export const EXHIBITION :  MenuItem = {
 }
 export const BRAINSTORMING :  MenuItem = {
   title: 'Brainstorming',
-  link : 'https://www.sixshop.com/no-excuse/exhibition',
+  link : 'https://www.sixshop.com/no-excuse/brainstorming',
   imageUrl : '/kanye.JPG'
 }
 
 export const FAQ :  MenuItem = {
   title: 'FAQ',
-  link : 'https://www.sixshop.com/no-excuse/exhibition',
+  link : 'https://www.sixshop.com/no-excuse/faq',
   imageUrl : ''
 }
 
