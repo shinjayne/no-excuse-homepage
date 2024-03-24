@@ -7,18 +7,18 @@ export type MenuItem = {
 export const SELECT : MenuItem = {
   title : 'Shop/Select',
   link : 'https://www.sixshop.com/no-excuse/select',
-  imageUrl : '/post/theme5.jpg'
+  imageUrl : '/cuts/sturd_jacket_full_001.jpg'
 }
 
 export const EXHIBITION :  MenuItem = {
   title: 'Shop/Exhibition',
   link : 'https://www.sixshop.com/no-excuse/exhibition',
-  imageUrl : '/post/theme1.jpeg'
+  imageUrl : '/cuts/biker_pants_001.jpg'
 }
 export const BRAINSTORMING :  MenuItem = {
   title: 'Brainstorming',
   link : 'https://www.sixshop.com/no-excuse/exhibition',
-  imageUrl : '/post/theme6.jpg'
+  imageUrl : '/kanye.JPG'
 }
 
 export const FAQ :  MenuItem = {
@@ -26,6 +26,18 @@ export const FAQ :  MenuItem = {
   link : 'https://www.sixshop.com/no-excuse/exhibition',
   imageUrl : ''
 }
+
+export type StandingModelMenu = {
+  imageUrl : string
+  link : string
+}
+
+export const StandingModelMenuList: StandingModelMenu[] = [
+  {
+    imageUrl : '/standing/standing001.png',
+    link : ''
+  }
+]
 
 
 const MenuList: MenuItem[] = [

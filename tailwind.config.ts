@@ -20,9 +20,14 @@ const config: Config = {
           '0%': { transform: 'translateX(50%)' },
           '100%': { transform: 'translateX(-80%)' },
         },
+        blink: {
+          '10%' : {opacity : '0.5'},
+          '20%' : {opacity : '1'},
+        }
       },
       animation: {
         slide: 'slide 30s linear infinite',
+        blink : 'blink 5s 1s linear infinite'
       },
     },
   },
