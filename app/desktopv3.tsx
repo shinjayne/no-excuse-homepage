@@ -76,23 +76,23 @@ export default function DesktopV3() {
             >
               <img
                 src={'/standing/standing004.png'}
-                className={'object-cover h-[50vw] max-h-[600px] mr-[8vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50 animate-blink'}
+                className={'object-cover h-[50vw] max-h-[550px] mr-[8vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50 animate-blink'}
                 onClick={() => {
-                  window.open('https://www.sixshop.com/no-excuse/product/492e79f9-f8f3-44eb-9daf-c3ebef9b3354')
+                  window.open('https://showroom.no-excuse.shop/product/492e79f9-f8f3-44eb-9daf-c3ebef9b3354')
                 }}
               />
               <img
                 src={'/standing/standing006.png'}
-                className={'object-cover h-[50vw] max-h-[600px] mr-[24vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50 animate-blink'}
+                className={'object-cover h-[50vw] max-h-[550px] mr-[24vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50 animate-blink'}
                 onClick={() => {
-                  window.open('https://www.sixshop.com/no-excuse/product/22a851fc-66f7-462c-981a-db82f55224c1')
+                  window.open('https://showroom.no-excuse.shop/product/22a851fc-66f7-462c-981a-db82f55224c1')
                 }}
               />
               <img
                 src={'/standing/standing001.png'}
-                className={'object-cover h-[50vw] max-h-[600px] cursor-pointer hover:drop-shadow-lg hover:brightness-50  animate-blink'}
+                className={'object-cover h-[50vw] max-h-[550px] cursor-pointer hover:drop-shadow-lg hover:brightness-50  animate-blink'}
                 onClick={() => {
-                  window.open('https://www.sixshop.com/no-excuse/product/4dc425a9-cb7e-4e47-982a-d0183bf82e6e')
+                  window.open('https://showroom.no-excuse.shop/product/4dc425a9-cb7e-4e47-982a-d0183bf82e6e')
                 }}
               />
             </div>

@@ -6,24 +6,24 @@ export type MenuItem = {
 
 export const SELECT : MenuItem = {
   title : 'Shop/Select',
-  link : 'https://www.sixshop.com/no-excuse/select',
+  link : 'https://showroom.no-excuse.shop/select',
   imageUrl : '/cuts/sturd_jacket_full_001.jpg'
 }
 
 export const EXHIBITION :  MenuItem = {
   title: 'Shop/Exhibition',
-  link : 'https://www.sixshop.com/no-excuse/exhibition',
+  link : 'https://showroom.no-excuse.shop/exhibition',
   imageUrl : '/cuts/biker_pants_001.jpg'
 }
 export const BRAINSTORMING :  MenuItem = {
   title: 'Brainstorming',
-  link : 'https://www.sixshop.com/no-excuse/brainstorming',
+  link : 'https://showroom.no-excuse.shop/brainstorming',
   imageUrl : '/kanye.JPG'
 }
 
 export const FAQ :  MenuItem = {
   title: 'FAQ',
-  link : 'https://www.sixshop.com/no-excuse/faq',
+  link : 'https://showroom.no-excuse.shop/faq',
   imageUrl : ''
 }
 
