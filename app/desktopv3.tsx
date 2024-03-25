@@ -29,8 +29,9 @@ export default function DesktopV3() {
         <div
           style={{
             width: `100%`,
+            backgroundPosition: '50% 57%',
           }}
-          className={`relative bg-[url('/main_bg2.JPEG')] bg-cover bg bg-center h-full p-3`}
+          className={`relative bg-[url('/main_bg2.JPEG')] bg-cover bg h-full p-3`}
         >
           <div
             className={'flex flex-col justify-start items-center'}
@@ -46,7 +47,9 @@ export default function DesktopV3() {
               src={artUrl}
               key={artUrl}
               style={{
-                height: '30vh',
+                width : '50vw',
+                minWidth : '800px',
+                // height: '35vh',
                 // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
                 // maxHeight: '80vh',
                 // maxWidth: '60%',
