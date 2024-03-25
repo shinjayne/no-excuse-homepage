@@ -62,7 +62,12 @@ export default function DesktopV3() {
                 cursor: 'pointer',
                 marginBottom: '32px',
                 position: 'relative',
-                top: '12vh',
+                top: '6vh',
+                boxShadow: '0 1px 1px rgba(0,0,0,0.12), \n' +
+                  '              0 2px 2px rgba(0,0,0,0.12), \n' +
+                  '              0 4px 4px rgba(0,0,0,0.12), \n' +
+                  '              0 8px 8px rgba(0,0,0,0.12),\n' +
+                  '              0 16px 16px rgba(0,0,0,0.12)'
               }}
               onClick={() => {
                 changeArt()

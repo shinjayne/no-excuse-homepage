@@ -50,13 +50,18 @@ export default function MobileV2() {
                 // width: `${45 + (scrollPositions.scrollY / 100) * 15}%`,
                 borderImageSource: 'url("/photoframe.webp")',
                 borderImageWidth: '10px',
-                borderWidth: '10px',
+                borderWidth: '6px',
                 borderImageRepeat: 'repeat',
                 borderImageSlice: '4% 4% 4% 4%',
                 cursor: 'pointer',
                 marginBottom: '32px',
                 position: 'absolute',
                 top: '20vh',
+                boxShadow: '0 1px 1px rgba(0,0,0,0.12), \n' +
+                  '              0 2px 2px rgba(0,0,0,0.12), \n' +
+                  '              0 4px 4px rgba(0,0,0,0.12), \n' +
+                  '              0 8px 8px rgba(0,0,0,0.12),\n' +
+                  '              0 16px 16px rgba(0,0,0,0.12)'
               }}
               onClick={() => {
                 changeArt()
