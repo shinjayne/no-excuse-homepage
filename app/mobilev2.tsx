@@ -82,7 +82,7 @@ export default function MobileV2() {
                 className={'object-cover h-[65vw] mr-[8vw] animate-blink'}
                 onClick={() => {
                   window.open(
-                    'http://showroom.no-excuse.shop/product/492e79f9-f8f3-44eb-9daf-c3ebef9b3354',
+                    'https://showroom.no-excuse.shop/product/492e79f9-f8f3-44eb-9daf-c3ebef9b3354',
                   )
                 }}
               />
@@ -91,7 +91,7 @@ export default function MobileV2() {
                 className={'object-cover h-[65vw] mr-[8vw] animate-blink'}
                 onClick={() => {
                   window.open(
-                    'http://showroom.no-excuse.shop/product/22a851fc-66f7-462c-981a-db82f55224c1',
+                    'https://showroom.no-excuse.shop/product/22a851fc-66f7-462c-981a-db82f55224c1',
                   )
                 }}
               />
@@ -100,7 +100,7 @@ export default function MobileV2() {
                 className={'object-cover h-[65vw] mr-[8vw] animate-blink'}
                 onClick={() => {
                   window.open(
-                    'http://showroom.no-excuse.shop/product/4dc425a9-cb7e-4e47-982a-d0183bf82e6e',
+                    'https://showroom.no-excuse.shop/product/4dc425a9-cb7e-4e47-982a-d0183bf82e6e',
                   )
                 }}
               />
