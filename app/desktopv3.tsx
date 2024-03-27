@@ -84,20 +84,9 @@ export default function DesktopV3() {
               }
             >
               <img
-                src={'/standing/standing004.png'}
-                className={
-                  'object-cover h-[50vw] max-h-[550px] mr-[8vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50 animate-blink'
-                }
-                onClick={() => {
-                  window.open(
-                    'https://showroom.no-excuse.shop/product/492e79f9-f8f3-44eb-9daf-c3ebef9b3354',
-                  )
-                }}
-              />
-              <img
                 src={'/standing/standing006.png'}
                 className={
-                  'object-cover h-[50vw] max-h-[550px] mr-[24vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50 animate-blink'
+                  'object-cover h-[50vw] max-h-[550px] mr-[8vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50 animate-blink'
                 }
                 onClick={() => {
                   window.open(
@@ -106,13 +95,36 @@ export default function DesktopV3() {
                 }}
               />
               <img
+                src={'/standing/standing007.png'}
+                className={
+                  'object-cover h-[50vw] max-h-[550px] mr-[12vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50  animate-blink'
+                }
+                onClick={() => {
+                  window.open(
+                    'https://showroom.no-excuse.shop/product/145d43cd-b4a2-4e17-aa10-cd3eb0fc3815',
+                  )
+                }}
+              />
+
+              <img
                 src={'/standing/standing001.png'}
                 className={
-                  'object-cover h-[50vw] max-h-[550px] cursor-pointer hover:drop-shadow-lg hover:brightness-50  animate-blink'
+                  'object-cover h-[50vw] max-h-[550px] mr-[12vw] cursor-pointer hover:drop-shadow-lg hover:brightness-50  animate-blink'
                 }
                 onClick={() => {
                   window.open(
                     'https://showroom.no-excuse.shop/product/4dc425a9-cb7e-4e47-982a-d0183bf82e6e',
+                  )
+                }}
+              />
+              <img
+                src={'/standing/standing004.png'}
+                className={
+                  'object-cover h-[50vw] max-h-[550px] cursor-pointer hover:drop-shadow-lg hover:brightness-50 animate-blink'
+                }
+                onClick={() => {
+                  window.open(
+                    'https://showroom.no-excuse.shop/product/492e79f9-f8f3-44eb-9daf-c3ebef9b3354',
                   )
                 }}
               />
