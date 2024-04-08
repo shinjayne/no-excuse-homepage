@@ -16,9 +16,10 @@ import MenuList from '@/app/menu'
 export function Navigation(props: {}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <Navbar height={'2.5rem'} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar height={'4rem'} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent justify={'start'}>
         <NavbarMenuToggle
+
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         />
       </NavbarContent>

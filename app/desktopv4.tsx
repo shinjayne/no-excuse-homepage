@@ -9,7 +9,7 @@ import { Navigation } from '@/components/Navigation'
 import usePickRandomArt from '@/app/artlist'
 import FooterContent from '@/app/footer'
 
-export default function DesktopV3() {
+export default function DesktopV4() {
   const box = useRef<HTMLDivElement | null>(null)
   const [scroll, setScroll] = useState({ x: 0, y: 0 })
   const [artUrl, changeArt] = usePickRandomArt()
@@ -25,11 +25,11 @@ export default function DesktopV3() {
   return (
     <div className={'flex flex-col'}>
       <Navigation />
-      <div className={'flex flex-row h-[80vh]'}>
+      <div className={'flex flex-row h-[65vh]'}>
         <div
           style={{
             width: `100%`,
-            backgroundPosition: '50% 57%',
+            backgroundPosition: '50% 65%',
           }}
           className={`relative bg-[url('/main_bg2.JPEG')] bg-cover bg h-full p-3`}
         >
@@ -43,46 +43,7 @@ export default function DesktopV3() {
             }}
             // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
           >
-            <img
-              src={artUrl}
-              key={artUrl}
-              style={{
-                width: '50vw',
-                minWidth: '800px',
-                // height: '35vh',
-                // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
-                // maxHeight: '80vh',
-                // maxWidth: '60%',
-                // width: `${45 + (scrollPositions.scrollY / 100) * 15}%`,
-                borderImageSource: 'url("/photoframe.webp")',
-                borderImageWidth: '10px',
-                borderWidth: '10px',
-                borderImageRepeat: 'repeat',
-                borderImageSlice: '4% 4% 4% 4%',
-                cursor: 'pointer',
-                marginBottom: '32px',
-                position: 'relative',
-                top: '6vh',
-                boxShadow:
-                  '0 1px 1px rgba(0,0,0,0.12), \n' +
-                  '              0 2px 2px rgba(0,0,0,0.12), \n' +
-                  '              0 4px 4px rgba(0,0,0,0.12), \n' +
-                  '              0 8px 8px rgba(0,0,0,0.12),\n' +
-                  '              0 16px 16px rgba(0,0,0,0.12)',
-              }}
-              onClick={() => {
-                changeArt()
-              }}
-              // src={'frame_1.png'}
-              // className={`w-[]`}
-              // className={'absolute top-0 right-0'}
-              // style={{ width: `${(scrollPositions.scrollY / 100) * 90}%` }}
-            />
-            <div
-              className={
-                'flex flex-row justify-center items-end w-full absolute bottom-[0px] z-10 '
-              }
-            >
+            <div className={'flex flex-row justify-center items-end w-full absolute bottom-[18px] z-10'}>
               <img
                 src={'/standing/standing006.png'}
                 className={
@@ -148,16 +109,17 @@ export default function DesktopV3() {
           boldly—No Thanks, EXCUSE not needed.
         </div>
       </div>
-      <div className={'min-h-screen flex flex-row'}>
+      <div className={'flex flex-row justify-center gap-8 pt-[32px]'}>
         <div
-          className={`w-1/3 bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all cursor-not-allowed`}
+          // href={EXHIBITION.link}
+          className={`w-[30vw] h-[50vw] max-w-[360px] max-h-[600px] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all cursor-not-allowed`}
           style={{
             backgroundImage: `linear-gradient(to top,rgb(0 0 0 / 90%), rgb(34 34 34 / 56%)), url('${EXHIBITION.imageUrl}')`,
           }}
         >
           <div
             className={
-              'text-[24px] font-medium border-b-3 border-solid border-white px-2 py-1'
+              'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'
             }
           >
             {EXHIBITION.title.toUpperCase()}
@@ -176,14 +138,14 @@ export default function DesktopV3() {
         </div>
         <Link
           href={SELECT.link}
-          className={`w-1/3 bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
+          className={`w-[30vw] h-[50vw] max-w-[360px] max-h-[600px] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all`}
           style={{
             backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${SELECT.imageUrl}')`,
           }}
         >
           <div
             className={
-              'text-[24px] font-medium border-b-3 border-solid border-white px-2 py-1'
+              'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'
             }
           >
             {SELECT.title.toUpperCase()}
@@ -193,14 +155,14 @@ export default function DesktopV3() {
         </Link>
         <Link
           href={BRAINSTORMING.link}
-          className={`w-1/3 bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
+          className={`w-[30vw] h-[50vw] max-w-[360px] max-h-[600px] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all`}
           style={{
             backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${BRAINSTORMING.imageUrl}')`,
           }}
         >
           <div
             className={
-              'text-[24px] font-medium border-b-3 border-solid border-white px-2 py-1'
+              'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'
             }
           >
             {BRAINSTORMING.title.toUpperCase()}
