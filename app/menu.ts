@@ -7,7 +7,7 @@ export type MenuItem = {
 export const SELECT : MenuItem = {
   title : 'Shop/Select',
   link : 'https://showroom.no-excuse.shop/select',
-  imageUrl : '/cuts/sturd_jacket_full_001.jpg'
+  imageUrl : '/cuts/mp_m.jpg'
 }
 
 export const EXHIBITION :  MenuItem = {

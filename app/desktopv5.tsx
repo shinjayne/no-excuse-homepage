@@ -36,8 +36,8 @@ export default function DesktopV5() {
         <div
           className={'w-1/2 h-full bg-cover'}
           style={{
-            backgroundImage: `url('/daemun/IMG_8441.jpg')`,
-            backgroundPosition: 'center',
+            backgroundImage: `url('/daemun/IMG_0884_2.jpg')`,
+            backgroundPosition: '50% 60%',
           }}
         ></div>
       </div>
