@@ -23,90 +23,21 @@ export default function MobileV2() {
   return (
     <div className={'flex flex-col'}>
       <Navigation />
-      <div className={'flex flex-row h-[80vh]'}>
+      <div className={'flex flex-col h-[70vh]'}>
         <div
+          className={'w-full h-full bg-cover'}
           style={{
-            width: `100%`,
+            backgroundImage: `url('/daemun/IMG_2577.jpg')`,
+            backgroundPosition: '50% 80%',
           }}
-          className={`relative bg-[url('/main_bg2.JPEG')] bg-cover bg bg-center h-full p-3`}
-        >
-          <div
-            className={'flex flex-col justify-center items-center pt-32'}
-            style={{
-              width: `100%`,
-
-              // height: `${80 + (scrollPositions.scrollY / 100) * 10}%`,
-              // maxHeight: '90%',
-            }}
-            // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
-          >
-            <img
-              src={artUrl}
-              style={{
-                // height: '35vh',
-                // height: `${35 + (scrollPositions.scrollY / 100) * 15}%`,
-                // maxHeight: '80vh',
-                maxWidth: '90%',
-                // width: `${45 + (scrollPositions.scrollY / 100) * 15}%`,
-                borderImageSource: 'url("/photoframe.webp")',
-                borderImageWidth: '10px',
-                borderWidth: '6px',
-                borderImageRepeat: 'repeat',
-                borderImageSlice: '4% 4% 4% 4%',
-                cursor: 'pointer',
-                marginBottom: '32px',
-                position: 'absolute',
-                top: '20vh',
-                boxShadow:
-                  '0 1px 1px rgba(0,0,0,0.12), \n' +
-                  '              0 2px 2px rgba(0,0,0,0.12), \n' +
-                  '              0 4px 4px rgba(0,0,0,0.12), \n' +
-                  '              0 8px 8px rgba(0,0,0,0.12),\n' +
-                  '              0 16px 16px rgba(0,0,0,0.12)',
-              }}
-              onClick={() => {
-                changeArt()
-              }}
-              // src={'frame_1.png'}
-              // className={`w-[]`}
-              // className={'absolute top-0 right-0'}
-              // style={{ width: `${(scrollPositions.scrollY / 100) * 90}%` }}
-            />
-            <div
-              className={
-                'flex flex-row justify-center items-end w-full absolute bottom-[10vh] z-10'
-              }
-            >
-              <img
-                src={'/standing/standing004.png'}
-                className={'object-cover h-[65vw] mr-[8vw] animate-blink'}
-                onClick={() => {
-                  window.open(
-                    'https://showroom.no-excuse.shop/product/492e79f9-f8f3-44eb-9daf-c3ebef9b3354',
-                  )
-                }}
-              />
-              <img
-                src={'/standing/standing006.png'}
-                className={'object-cover h-[65vw] mr-[8vw] animate-blink'}
-                onClick={() => {
-                  window.open(
-                    'https://showroom.no-excuse.shop/product/22a851fc-66f7-462c-981a-db82f55224c1',
-                  )
-                }}
-              />
-              <img
-                src={'/standing/standing001.png'}
-                className={'object-cover h-[65vw] mr-[8vw] animate-blink'}
-                onClick={() => {
-                  window.open(
-                    'https://showroom.no-excuse.shop/product/4dc425a9-cb7e-4e47-982a-d0183bf82e6e',
-                  )
-                }}
-              />
-            </div>
-          </div>
-        </div>
+        ></div>
+        <div
+          className={'w-full h-full bg-cover'}
+          style={{
+            backgroundImage: `url('/daemun/IMG_0884_2.jpg')`,
+            backgroundPosition: '50% 70%',
+          }}
+        ></div>
       </div>
       {/*  /!*  DO NOTHING, just for spacing *!/*/}
       {/*<div className={'bg-black min-h-[200vh]'}>*/}
@@ -126,24 +57,6 @@ export default function MobileV2() {
       </div>
       <div className={'flex flex-col'}>
         <Link
-          href={EXHIBITION.link}
-          className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all`}
-          style={{
-            backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${EXHIBITION.imageUrl}')`,
-          }}
-        >
-          <div
-            className={
-              'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'
-            }
-          >
-            {EXHIBITION.title.toUpperCase()}
-          </div>
-          {/*<Space y={8} />*/}
-          {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
-        </Link>
-
-        <Link
           href={SELECT.link}
           className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
           style={{
@@ -160,6 +73,34 @@ export default function MobileV2() {
           {/*<Space y={8} />*/}
           {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
         </Link>
+        <div
+          // href={EXHIBITION.link}
+          className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all cursor-not-allowed`}
+          style={{
+            backgroundImage: `linear-gradient(to top,rgb(0 0 0 / 90%), rgb(34 34 34 / 56%)), url('${EXHIBITION.imageUrl}')`,
+          }}
+        >
+          <div
+            className={
+              'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1 relative'
+            }
+          >
+            {EXHIBITION.title.toUpperCase()}
+            <div className={'flex justify-center'}>
+              <div
+                className={
+                  'rounded-md border-1 border-solid border-white py-2 px-4 text-[12px] absolute top-[80px] z-10'
+                }
+              >
+                COMING SOON
+              </div>
+            </div>
+          </div>
+
+          {/*<Space y={8} />*/}
+          {/*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*/}
+        </div>
+
         <Link
           href={BRAINSTORMING.link}
           className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}
