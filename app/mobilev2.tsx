@@ -27,14 +27,14 @@ export default function MobileV2() {
         <div
           className={'w-full h-full bg-cover'}
           style={{
-            backgroundImage: `url('/daemun/IMG_2577.jpg')`,
+            backgroundImage: `url('/daemun/bikerpants.png')`,
             backgroundPosition: '50% 80%',
           }}
         ></div>
         <div
           className={'w-full h-full bg-cover'}
           style={{
-            backgroundImage: `url('/daemun/IMG_0884_2.jpg')`,
+            backgroundImage: `url('/daemun/leopard.png')`,
             backgroundPosition: '50% 70%',
           }}
         ></div>

@@ -25,21 +25,39 @@ export default function DesktopV5() {
   return (
     <div className={'flex flex-col'}>
       <Navigation />
-      <div className={'flex flex-row h-[70vh]'}>
-        <div
-          className={'w-1/2 h-full bg-cover'}
-          style={{
-            backgroundImage: `url('/daemun/IMG_2577.jpg')`,
-            backgroundPosition: '50% 70%',
-          }}
-        ></div>
-        <div
-          className={'w-1/2 h-full bg-cover'}
-          style={{
-            backgroundImage: `url('/daemun/IMG_0884_2.jpg')`,
-            backgroundPosition: '50% 60%',
-          }}
-        ></div>
+      <div className={'flex flex-col h-[200vh]'}>
+        <div className={'flex flex-row w-full h-1/2'}>
+          <div
+            className={'w-1/2 h-full bg-cover'}
+            style={{
+              backgroundImage: `url('/daemun/bikerpants.png')`,
+              backgroundPosition: '75% 70%',
+            }}
+          ></div>
+          <div
+            className={'w-1/2 h-full bg-cover'}
+            style={{
+              backgroundImage: `url('/daemun/monkey.jpeg')`,
+              backgroundPosition: '50% 100%',
+            }}
+          ></div>
+        </div>
+        <div className={'flex flex-row w-full h-1/2'}>
+          <div
+            className={'w-1/2 h-full bg-cover'}
+            style={{
+              backgroundImage: `url('/daemun/soldier.jpeg')`,
+              backgroundPosition: '100% 70%',
+            }}
+          ></div>
+          <div
+            className={'w-1/2 h-full bg-cover'}
+            style={{
+              backgroundImage: `url('/daemun/leopard.png')`,
+              backgroundPosition: '50% 60%',
+            }}
+          ></div>
+        </div>
       </div>
       {/*<div className={'bg-black min-h-[200vh]'}>*/}
       {/*  /!*  DO NOTHING, just for spacing *!/*/}

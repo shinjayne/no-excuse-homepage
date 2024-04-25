@@ -13,7 +13,7 @@ export const SELECT : MenuItem = {
 export const EXHIBITION :  MenuItem = {
   title: 'Shop/Exhibition',
   link : 'https://showroom.no-excuse.shop/exhibition',
-  imageUrl : '/cuts/biker_pants_001.jpg'
+  imageUrl : '/cuts/IMG_3736.jpg'
 }
 export const BRAINSTORMING :  MenuItem = {
   title: 'Brainstorming',
@@ -24,7 +24,7 @@ export const BRAINSTORMING :  MenuItem = {
 export const FAQ :  MenuItem = {
   title: 'FAQ',
   link : 'https://showroom.no-excuse.shop/faq',
-  imageUrl : ''
+  imageUrl : '/cuts/IMG_3736.jpg'
 }
 
 export type StandingModelMenu = {
