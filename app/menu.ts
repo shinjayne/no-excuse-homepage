@@ -15,6 +15,12 @@ export const EXHIBITION :  MenuItem = {
   link : 'https://showroom.no-excuse.shop/exhibition',
   imageUrl : '/cuts/IMG_3736.jpg'
 }
+export const INSTAGRAM :  MenuItem = {
+  title: 'Instagram',
+  link : 'https://instagram.com/noexcuse_archive',
+  imageUrl : '/brainstorming.jpeg'
+}
+
 export const BRAINSTORMING :  MenuItem = {
   title: 'Brainstorming',
   link : 'https://showroom.no-excuse.shop/brainstorming',
@@ -43,6 +49,7 @@ export const StandingModelMenuList: StandingModelMenu[] = [
 const MenuList: MenuItem[] = [
   SELECT,
   EXHIBITION,
+  INSTAGRAM,
   BRAINSTORMING,
   FAQ
 ]
