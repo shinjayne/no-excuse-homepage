@@ -179,7 +179,7 @@ export default function DesktopV4() {
         <div className={'text-xs font-medium flex flex-col items-center mb-5'}>
           <div>CUSTOMER SERVICE</div>
           <div>no-excuse-shop@naver.com</div>
-          <div>010-5133-6385</div>
+          <div>010-5707-5269</div>
           <div>평일 10:00 ~ 18:00 | 주말 및 공휴일 휴무</div>
         </div>
         <div className={'text-xs text-gray-500 text-center'}>
