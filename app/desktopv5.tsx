@@ -3,8 +3,6 @@
 import React, { useRef, useState } from 'react'
 import { useScroll } from '@react-hooks-library/core'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { BRAINSTORMING, EXHIBITION, SELECT } from '@/app/menu'
 import { Navigation } from '@/components/Navigation'
 import usePickRandomArt from '@/app/artlist'
 import FooterContent from '@/app/footer'
@@ -72,9 +70,7 @@ export default function DesktopV5() {
             who speak boldly—No Thanks, EXCUSE not needed.
           </div>
         </div>
-        <div
-          className={'h-[90vh]'}>
-        </div>
+        <div className={'h-[90vh]'}></div>
 
         {/*<div className={'flex flex-row justify-center gap-8 items-center h-[90vh]'}>*/}
         {/*  <div*/}
@@ -145,11 +141,13 @@ export default function DesktopV5() {
           }
         >
           <div
-            className={'text-xs font-medium flex flex-col items-center mb-5 text-white'}
+            className={
+              'text-xs font-medium flex flex-col items-center mb-5 text-white'
+            }
           >
             <div>CUSTOMER SERVICE</div>
             <div>no-excuse-shop@naver.com</div>
-            <div>010-5707-5269</div>
+            <div>0507-1352-6385</div>
             <div>평일 10:00 ~ 18:00 | 주말 및 공휴일 휴무</div>
           </div>
           <div className={'text-xs text-gray-500 text-center'}>

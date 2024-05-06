@@ -43,7 +43,11 @@ export default function DesktopV4() {
             }}
             // style={{ width: `${70 + (scrollPositions.scrollY / 100) * 30}%` }}
           >
-            <div className={'flex flex-row justify-center items-end w-full absolute bottom-[18px] z-10'}>
+            <div
+              className={
+                'flex flex-row justify-center items-end w-full absolute bottom-[18px] z-10'
+              }
+            >
               <img
                 src={'/standing/standing006.png'}
                 className={
@@ -179,7 +183,7 @@ export default function DesktopV4() {
         <div className={'text-xs font-medium flex flex-col items-center mb-5'}>
           <div>CUSTOMER SERVICE</div>
           <div>no-excuse-shop@naver.com</div>
-          <div>010-5707-5269</div>
+          <div>0507-1352-6385</div>
           <div>평일 10:00 ~ 18:00 | 주말 및 공휴일 휴무</div>
         </div>
         <div className={'text-xs text-gray-500 text-center'}>

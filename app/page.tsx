@@ -3,13 +3,16 @@
 import { useWindowSize } from '@react-hooks-library/core'
 
 import { NextUIProvider } from '@nextui-org/react'
-import DesktopV3 from '@/app/desktopv3'
 import MobileV2 from '@/app/mobilev2'
-import DesktopV4 from '@/app/desktopv4'
 import DesktopV5 from '@/app/desktopv5'
+import { redirect } from 'next/navigation'
 
 export default function Home() {
   const windowSize = useWindowSize()
+
+  if (window.location.hostname === 'showroom.no-excuse.shop') {
+    redirect('https://sixshop.com/no-excuse' + window.location.pathname)
+  }
 
   if (windowSize.width > 640) {
     console.log('desktop loaded')
