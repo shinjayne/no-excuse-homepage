@@ -56,7 +56,7 @@ export default function MobileV2() {
       {/*  /!*  DO NOTHING, just for spacing *!/*/}
       {/*<div className={'bg-black min-h-[200vh]'}>*/}
       {/*</div>*/}
-      <div  className={'sticky top-0 bg-black'}>
+      <div className={'sticky top-0 bg-black'}>
         <div
           className={
             'flex flex-col justify-center items-center py-2 font-light text-medium  text-start bg-black text-white overflow-hidden'
@@ -141,12 +141,16 @@ export default function MobileV2() {
           }
         >
           <div
-            className={'text-xs text-white font-medium flex flex-col items-center mb-5'}
+            className={
+              'text-xs text-white font-medium flex flex-col items-center mb-5'
+            }
           >
             <div>CUSTOMER SERVICE</div>
             <div>no-excuse-shop@naver.com</div>
-            <div>010-5133-6385</div>
-            <div>평일 10:00 ~ 18:00 | 주말 및 공휴일 휴무</div>
+            <div>0507-1352-6385</div>
+            <div>
+              WEEKDAY 10:00 ~ 18:00 | NOT AVAILABLE ON WEEKEND OR HOLIDAY
+            </div>
           </div>
           <div className={'text-xs text-gray-500 text-center'}>
             {FooterContent}

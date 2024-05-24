@@ -148,7 +148,7 @@ export default function DesktopV5() {
             <div>CUSTOMER SERVICE</div>
             <div>no-excuse-shop@naver.com</div>
             <div>0507-1352-6385</div>
-            <div>평일 10:00 ~ 18:00 | 주말 및 공휴일 휴무</div>
+            <div>WEEKDAY 10:00 ~ 18:00 | NOT AVAILABLE ON WEEKEND OR HOLIDAY</div>
           </div>
           <div className={'text-xs text-gray-500 text-center'}>
             {FooterContent}
