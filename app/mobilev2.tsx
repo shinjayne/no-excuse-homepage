@@ -142,7 +142,7 @@ export default function MobileV2() {
         >
           <div
             className={
-              'text-xs text-white font-medium flex flex-col items-center mb-5'
+              'text-xs text-white text-center font-medium flex flex-col items-center mb-5'
             }
           >
             <div>CUSTOMER SERVICE</div>

@@ -142,7 +142,7 @@ export default function DesktopV5() {
         >
           <div
             className={
-              'text-xs font-medium flex flex-col items-center mb-5 text-white'
+              'text-xs text-center font-medium flex flex-col items-center mb-5 text-white'
             }
           >
             <div>CUSTOMER SERVICE</div>
