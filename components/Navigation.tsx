@@ -13,9 +13,10 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import MenuList from '@/app/menu'
 
-function MenuItem({link, text} : {link: string, text: string}) {
+function MenuItem({ link, text }: { link: string; text: string }) {
   return (
-    <Link className={'text-lg font-medium'}
+    <Link
+      className={'text-lg font-medium'}
       style={{
         // textShadow: '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black',
         color: 'white',
@@ -36,7 +37,11 @@ export function Navigation(props: {}) {
         'fixed z-50 w-full flex flex-col justify-center items-center pt-12 h-[80vh]'
       }
     >
-      <img src={'/redlogo.svg'} className={'lg:max-w-[22vw] w-[70vw]'} />
+      <img
+        src={'/redlogo.svg'}
+        className={'lg:max-w-[22vw] w-[70vw]'}
+        alt={'no, excuse'}
+      />
       <div
         className={'flex flex-col items-center justify-center gap-4 pt-12'}
         style={
@@ -46,10 +51,8 @@ export function Navigation(props: {}) {
           }
         }
       >
-        {MenuList.map(menu => {
-          return (
-            <MenuItem link={menu.link} key={menu.link} text={menu.title} />
-          )
+        {MenuList.map((menu) => {
+          return <MenuItem link={menu.link} key={menu.link} text={menu.title} />
         })}
       </div>
     </div>
