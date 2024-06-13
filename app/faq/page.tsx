@@ -6,9 +6,7 @@ export const metadata: Metadata = {
   description: 'Frequently asked question',
   openGraph: {
     title: 'FAQ',
-    type: 'website',
     url: 'https://www.no-excuse.shop/faq',
-    siteName: 'NO, EXCUSE',
     description: 'Frequently asked question',
   },
 }
