@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description: 'Selected casual pieces stocklist',
   openGraph: {
     title: 'SELECT',
+    type: 'website',
     url: 'https://www.no-excuse.shop/select',
+    siteName: 'NO, EXCUSE',
     description: 'Selected casual pieces stocklist',
   },
 }

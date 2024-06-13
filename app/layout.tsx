@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
-import ogImage from './opengraph-image.png'
+
 import './globals.css'
 
 const manrope = Manrope({ subsets: ['latin'] })
@@ -14,14 +14,6 @@ export const metadata: Metadata = {
     url: 'https://www.no-excuse.shop',
     siteName: 'NO, EXCUSE',
     description: 'DARE TO STAND OUT. NO,EXCUSE',
-    images: [
-      {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height,
-        alt: 'NO, EXCUSE',
-      },
-    ],
   },
 }
 

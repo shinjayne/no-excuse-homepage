@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description: 'NO,EXCUSE Original pieces stocklist',
   openGraph: {
     title: 'EXHIBITION',
+    type: 'website',
     url: 'https://www.no-excuse.shop/exhibition',
+    siteName: 'NO, EXCUSE',
     description: 'NO,EXCUSE Original pieces stocklist',
   },
 }
