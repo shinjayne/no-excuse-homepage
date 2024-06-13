@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <Redirection link={'https://showroom.no-excuse.shop/faq'} />
+  return <Redirection link={'https://showroom.no-excuse.shop/fqa'} />
 }
