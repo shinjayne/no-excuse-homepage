@@ -1,5 +1,6 @@
 import Redirection from '@/components/Redirection'
 import { Metadata } from 'next'
+import ogImage from '@/app/opengraph-image.png'
 
 export const metadata: Metadata = {
   title: 'BRAINSTORMING',
@@ -10,6 +11,14 @@ export const metadata: Metadata = {
     url: 'https://www.no-excuse.shop/brainstorming',
     siteName: 'NO, EXCUSE',
     description: 'Inspiration, background of NO,EXCUSE project',
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
+        alt: 'NO, EXCUSE',
+      },
+    ],
   },
 }
 

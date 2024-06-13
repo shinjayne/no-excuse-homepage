@@ -1,5 +1,6 @@
 import Redirection from '@/components/Redirection'
 import { Metadata } from 'next'
+import ogImage from '@/app/opengraph-image.png'
 
 export const metadata: Metadata = {
   title: 'SELECT',
@@ -10,6 +11,14 @@ export const metadata: Metadata = {
     url: 'https://www.no-excuse.shop/select',
     siteName: 'NO, EXCUSE',
     description: 'Selected casual pieces stocklist',
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
+        alt: 'NO, EXCUSE',
+      },
+    ],
   },
 }
 
