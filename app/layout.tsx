@@ -38,6 +38,10 @@ export default function RootLayout({
           name="naver-site-verification"
           content="277c753d354cbf1917220136bb1cd5e6a851fb03"
         />
+        <meta
+          name="naver-site-verification"
+          content="a2fd37980a5ec5420b27281ed7b348209362e962"
+        />
       </head>
       <body className={manrope.className}>{children}</body>
     </html>
