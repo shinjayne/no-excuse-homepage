@@ -29,7 +29,7 @@ export default function Page() {
     <>
       <div
         className={
-          'flex flex-col items-center justify-center bg-black text-white h-[100vh]'
+          'flex flex-col items-center justify-center bg-black text-white pt-4 pb-60'
         }
       >
         <img
