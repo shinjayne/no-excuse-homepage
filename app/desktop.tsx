@@ -3,13 +3,11 @@
 import React, { useRef, useState } from 'react'
 import { useScroll } from '@react-hooks-library/core'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { BRAINSTORMING, EXHIBITION, SELECT } from '@/app/menu'
 import { Navigation } from '@/components/Navigation'
 import usePickRandomArt from '@/app/artlist'
 import FooterContent from '@/app/footer'
 
-export default function MobileV2() {
+export default function Desktop() {
   const box = useRef<HTMLDivElement | null>(null)
   const [scroll, setScroll] = useState({ x: 0, y: 0 })
   const [artUrl, changeArt] = usePickRandomArt()
@@ -18,44 +16,46 @@ export default function MobileV2() {
     setScroll({ x: scrollX, y: scrollY }),
   )
 
+  console.log(`DesktopV5 : ${artUrl}`)
+
   const router = useRouter()
 
   return (
     <div className={'flex flex-col'}>
       <Navigation />
 
-      <div
-        className={'w-full h-[100vh] bg-cover sticky top-0'}
-        style={{
-          backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0.05)), url('/daemun/bikerpants.png')`,
-          backgroundPosition: '50% 80%',
-        }}
-      ></div>
-      <div
-        className={'w-full h-[100vh] bg-cover sticky top-0'}
-        style={{
-          backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0.05)), url('/daemun/monkey.jpeg')`,
-          backgroundPosition: '50% 100%',
-        }}
-      ></div>
-      <div
-        className={'w-full h-[100vh] bg-cover sticky top-0'}
-        style={{
-          backgroundImage: ` linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0.05)), url('/daemun/soldier.jpeg')`,
-          backgroundPosition: '100% 70%',
-        }}
-      ></div>
-      <div
-        className={'w-full h-[100vh] bg-cover sticky top-0'}
-        style={{
-          backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0.05)), url('/daemun/leopard3.jpeg')`,
-          backgroundPosition: '50% 70%',
-        }}
-      ></div>
-
-      {/*  /!*  DO NOTHING, just for spacing *!/*/}
-      {/*<div className={'bg-black min-h-[200vh]'}>*/}
-      {/*</div>*/}
+      <div className={'flex flex-row w-full h-[100vh] sticky top-0'}>
+        <div
+          className={'w-1/2 h-full bg-cover'}
+          style={{
+            backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0.05)), url('/daemun/bikerpants.png')`,
+            backgroundPosition: '75% 70%',
+          }}
+        ></div>
+        <div
+          className={'w-1/2 h-full bg-cover'}
+          style={{
+            backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0.05)),url('/daemun/monkey.jpeg')`,
+            backgroundPosition: '50% 100%',
+          }}
+        ></div>
+      </div>
+      <div className={'flex flex-row w-full h-[100vh] sticky top-0'}>
+        <div
+          className={'w-1/2 h-full bg-cover'}
+          style={{
+            backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0.05)),url('/daemun/soldier.jpeg')`,
+            backgroundPosition: '100% 70%',
+          }}
+        ></div>
+        <div
+          className={'w-1/2 h-full bg-cover'}
+          style={{
+            backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0.05)),url('/daemun/leopard2.png')`,
+            backgroundPosition: '50% 60%',
+          }}
+        ></div>
+      </div>
       <div className={'sticky top-0 bg-black'}>
         <div
           className={
@@ -71,27 +71,11 @@ export default function MobileV2() {
           </div>
         </div>
         <div className={'h-[90vh]'}></div>
-        {/*<div className={'flex flex-col'}>*/}
-        {/*  <Link*/}
-        {/*    href={SELECT.link}*/}
-        {/*    className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}*/}
-        {/*    style={{*/}
-        {/*      backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${SELECT.imageUrl}')`,*/}
-        {/*    }}*/}
-        {/*  >*/}
-        {/*    <div*/}
-        {/*      className={*/}
-        {/*        'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'*/}
-        {/*      }*/}
-        {/*    >*/}
-        {/*      {SELECT.title.toUpperCase()}*/}
-        {/*    </div>*/}
-        {/*    /!*<Space y={8} />*!/*/}
-        {/*    /!*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*!/*/}
-        {/*  </Link>*/}
+
+        {/*<div className={'flex flex-row justify-center gap-8 items-center h-[90vh]'}>*/}
         {/*  <div*/}
         {/*    // href={EXHIBITION.link}*/}
-        {/*    className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all cursor-not-allowed`}*/}
+        {/*    className={`w-[30vw] h-[50vw] max-w-[360px] max-h-[600px] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all cursor-not-allowed`}*/}
         {/*    style={{*/}
         {/*      backgroundImage: `linear-gradient(to top,rgb(0 0 0 / 90%), rgb(34 34 34 / 56%)), url('${EXHIBITION.imageUrl}')`,*/}
         {/*    }}*/}
@@ -116,10 +100,26 @@ export default function MobileV2() {
         {/*    /!*<Space y={8} />*!/*/}
         {/*    /!*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*!/*/}
         {/*  </div>*/}
-
+        {/*  <Link*/}
+        {/*    href={SELECT.link}*/}
+        {/*    className={`w-[30vw] h-[50vw] max-w-[360px] max-h-[600px] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all`}*/}
+        {/*    style={{*/}
+        {/*      backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${SELECT.imageUrl}')`,*/}
+        {/*    }}*/}
+        {/*  >*/}
+        {/*    <div*/}
+        {/*      className={*/}
+        {/*        'text-[18px] font-medium border-b-3 border-solid border-white px-2 py-1'*/}
+        {/*      }*/}
+        {/*    >*/}
+        {/*      {SELECT.title.toUpperCase()}*/}
+        {/*    </div>*/}
+        {/*    /!*<Space y={8} />*!/*/}
+        {/*    /!*<div className={'text-[16px] font-light'}>VIEW ALL {'>'}</div>*!/*/}
+        {/*  </Link>*/}
         {/*  <Link*/}
         {/*    href={BRAINSTORMING.link}*/}
-        {/*    className={`min-h-[180vw] bg-cover bg bg-center p-10 text-white  flex flex-col justify-center items-center overflow-hidden break-all`}*/}
+        {/*    className={`w-[30vw] h-[50vw] max-w-[360px] max-h-[600px] bg-cover bg bg-center p-10 text-white flex flex-col justify-center items-center overflow-hidden break-all`}*/}
         {/*    style={{*/}
         {/*      backgroundImage: `linear-gradient(to top,rgba(34, 34, 34, 0.9),rgba(34, 34, 34, 0)), url('${BRAINSTORMING.imageUrl}')`,*/}
         {/*    }}*/}
@@ -137,12 +137,12 @@ export default function MobileV2() {
         {/*</div>*/}
         <div
           className={
-            'w-full flex flex-col items-center gap-2 pt-20  pb-10 px-10'
+            'w-full flex flex-col items-center gap-2 bg-black pt-20  pb-10 px-10'
           }
         >
           <div
             className={
-              'text-xs text-white text-center font-medium flex flex-col items-center mb-5'
+              'text-xs text-center font-medium flex flex-col items-center mb-5 text-white'
             }
           >
             <div>CUSTOMER SERVICE</div>
