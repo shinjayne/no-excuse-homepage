@@ -31,7 +31,10 @@ export default function Page() {
           'flex flex-col items-center justify-center bg-black text-white h-[100vh]'
         }
       >
-        <div>Coming Soon</div>
+        <div className={'mb-2 text-xl font-black'}>
+          Project 01. Self-Consciousness
+        </div>
+        <div className={'mb-10'}>Coming Soon</div>
         <video
           style={{ width: '50%' }}
           className="media-video__video"
