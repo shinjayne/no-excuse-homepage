@@ -36,6 +36,7 @@ export default function Page() {
           style={{ width: '50%' }}
           className="media-video__video"
           poster="/project01/preview_poster.PNG"
+          autoPlay={true}
           playsInline={true}
           loop={true}
           muted={true}
