@@ -24,5 +24,31 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <>project 01. Self-Consciousness</>
+  return (
+    <>
+      <div
+        className={
+          'flex flex-col items-center justify-center bg-black text-white h-[100vh]'
+        }
+      >
+        <div>Coming Soon</div>
+        <video
+          style={{ width: '50%' }}
+          className="media-video__video"
+          poster="/project01/preview_poster.PNG"
+          playsInline={true}
+          loop={true}
+          muted={true}
+          controls={false}
+        >
+          <img
+            className="media-video__poster"
+            src="/project01/preview_poster.PNG"
+            alt=""
+          />
+          <source type="video/mp4" src="/project01/preview.mp4" />
+        </video>
+      </div>
+    </>
+  )
 }
