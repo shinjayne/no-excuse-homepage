@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import ogImage from '@/app/opengraph-image.png'
 import Redirection from '@/components/Redirection'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.no-excuse.shop'),
@@ -31,12 +32,32 @@ export default function Page() {
           'flex flex-col items-center justify-center bg-black text-white h-[100vh]'
         }
       >
-        <div className={'mb-2 text-xl font-black'}>
+        <img
+          src={'/assets/arch-logo.svg'}
+          alt={'no,excuse'}
+          className={'w-[80px] invert brightness-0 mb-2'}
+        />
+        <div className={'mb-10 text-small font-medium'}>
           Project 01. Self-Consciousness
         </div>
-        <div className={'mb-10'}>Coming Soon</div>
+        <div className={'mb-10 text-[12px] font-light'}>
+          Opens in few days. Follow our instagram to get noticed!
+        </div>
+        <Link
+          className={'mb-4 text-xs text-[#C60000] cursor-pointer'}
+          href={'https://instagram.com/noexcuse_archive'}
+        >
+          Go Instagram
+        </Link>
+        <Link
+          className={'mb-10 text-xs text-[#C60000] cursor-pointer'}
+          href={'/'}
+        >
+          Go Website
+        </Link>
+
         <video
-          style={{ width: '50%' }}
+          style={{ width: '70%' }}
           className="media-video__video"
           poster="/project01/preview_poster.PNG"
           autoPlay={true}
