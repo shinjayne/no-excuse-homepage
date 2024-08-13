@@ -4,6 +4,12 @@ export type MenuItem = {
   imageUrl: string
 }
 
+export const GIRLS: MenuItem = {
+  title: 'Shop/Select/Girls',
+  link: '/select',
+  imageUrl: '/cuts/mp_m.jpg',
+}
+
 export const SELECT: MenuItem = {
   title: 'Shop/Select',
   link: '/select',
@@ -45,6 +51,13 @@ export const StandingModelMenuList: StandingModelMenu[] = [
   },
 ]
 
-const MenuList: MenuItem[] = [SELECT, EXHIBITION, INSTAGRAM, BRAINSTORMING, FAQ]
+const MenuList: MenuItem[] = [
+  GIRLS,
+  SELECT,
+  EXHIBITION,
+  INSTAGRAM,
+  BRAINSTORMING,
+  FAQ,
+]
 
 export default MenuList
