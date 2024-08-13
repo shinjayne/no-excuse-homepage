@@ -6,7 +6,7 @@ export type MenuItem = {
 
 export const GIRLS: MenuItem = {
   title: 'Shop/Girls',
-  link: '/select',
+  link: '/select-girls',
   imageUrl: '/cuts/mp_m.jpg',
 }
 
