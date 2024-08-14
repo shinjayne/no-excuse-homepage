@@ -24,5 +24,5 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <Redirection link={'https://showroom.no-excuse.shop/select-girls'} />
+  return <Redirection link={'https://www.sixshop.com/no-excuse/select-girls'} />
 }
