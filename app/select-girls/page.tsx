@@ -3,13 +3,13 @@ import { Metadata } from 'next'
 import ogImage from '@/app/opengraph-image.png'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.no-excuse.shop'),
+  metadataBase: new URL('https://www.no-excuse-archive.com'),
   title: 'SELECT FOR GIRLS',
   description: 'Selected casual pieces stocklist',
   openGraph: {
     title: 'SELECT FOR GIRLS',
     type: 'website',
-    url: 'https://www.no-excuse.shop/select-girls',
+    url: 'https://www.no-excuse-archive.com/select-girls',
     siteName: 'NO, EXCUSE',
     description: 'Selected casual pieces stocklist',
     images: [

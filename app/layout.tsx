@@ -6,13 +6,13 @@ import './globals.css'
 const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.no-excuse.shop'),
+  metadataBase: new URL('https://www.no-excuse-archive.com'),
   title: 'NO, EXCUSE',
   description: 'NO, EXCUSE',
   openGraph: {
     title: 'NO, EXCUSE',
     type: 'website',
-    url: 'https://www.no-excuse.shop',
+    url: 'https://www.no-excuse-archive.com',
     siteName: 'NO, EXCUSE',
     description: 'DARE TO STAND OUT. NO,EXCUSE',
     images: [

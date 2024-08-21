@@ -12,7 +12,10 @@ export default function Home() {
   const windowSize = useWindowSize()
 
   useEffect(() => {
-    if (window.location.hostname === 'showroom.no-excuse.shop') {
+    if (
+      window.location.hostname === 'showroom.no-excuse.shop' ||
+      window.location.hostname === 'showroom.no-excuse-archive.com'
+    ) {
       redirect('https://sixshop.com/no-excuse' + window.location.pathname)
     }
   })

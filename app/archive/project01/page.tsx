@@ -1,16 +1,15 @@
 import { Metadata } from 'next'
 import ogImage from '@/app/opengraph-image.png'
-import Redirection from '@/components/Redirection'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.no-excuse.shop'),
+  metadataBase: new URL('https://www.no-excuse-archive.com'),
   title: 'BRAINSTORMING',
   description: 'Inspiration, background of NO,EXCUSE project',
   openGraph: {
     title: 'Project 01. Self-Consciousness',
     type: 'website',
-    url: 'https://www.no-excuse.shop/archive/project01',
+    url: 'https://www.no-excuse-archive.com/archive/project01',
     siteName: 'NO, EXCUSE',
     description: 'Project 01. Self-Consciousness',
     images: [

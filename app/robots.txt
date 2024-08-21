@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 Disallow: /private/
-Sitemap: https://no-excuse.shop/sitemap.xml
+Sitemap: https://no-excuse-archive.com/sitemap.xml

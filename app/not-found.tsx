@@ -5,7 +5,10 @@ import { redirect } from 'next/navigation'
 
 export default function NotFound() {
   useEffect(() => {
-    if (window.location.hostname === 'showroom.no-excuse.shop') {
+    if (
+      window.location.hostname === 'showroom.no-excuse-archive.com' ||
+      window.location.hostname === 'showroom.no-excuse.shop'
+    ) {
       redirect('https://sixshop.com/no-excuse' + window.location.pathname)
     }
   })
