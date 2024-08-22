@@ -13,7 +13,9 @@ export function ExhibitionTopBar() {
       }}
       className={'flex flex-col items-center justify-start'}
     >
-      <img src={'/assets/noex2_black.png'} style={{ width: '95vw' }} />
+      <Link href={'/exhibition'}>
+        <img src={'/assets/noex2_black.png'} style={{ width: '95vw' }} />
+      </Link>
       <div
         className={
           'flex justify-center gap-10 sm:gap-44 mt-8 text-[14px] sm:text-[16px]'
