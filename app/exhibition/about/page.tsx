@@ -1,4 +1,5 @@
 import { ExhibitionTopBar } from '@/app/exhibition/ExhibitionTopBar'
+import Link from 'next/link'
 
 export default function ExhibitionAboutPage() {
   return (
@@ -43,6 +44,15 @@ export default function ExhibitionAboutPage() {
           damaged forms. Each piece reflects a commitment to maintaining the
           essence of beauty and love, even in the face of inevitable
           destruction.
+        </div>
+
+        <div className={'flex justify-center'}>
+          <Link
+            href={'/'}
+            className={'mt-20 font-bold border-1 border-black border-solid p-2'}
+          >
+            WHO WE ARE
+          </Link>
         </div>
       </div>
     </div>
