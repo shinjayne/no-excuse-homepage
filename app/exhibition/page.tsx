@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import ogImage from '@/app/og-exhibition.png'
-import Link from 'next/link'
+import { ExhibitionTopBar } from '@/app/exhibition/ExhibitionTopBar'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.no-excuse-archive.com'),
@@ -27,31 +27,7 @@ export default function Page() {
   return (
     <>
       {/* top bar start */}
-      <div
-        style={{
-          width: '100%',
-          // marginTop: '-0.5vw',
-          position: 'fixed',
-          top: '-0.5vw',
-        }}
-        className={'flex flex-col items-center justify-start'}
-      >
-        <img src={'/assets/noex2_black.png'} style={{ width: '95vw' }} />
-        <div className={'flex justify-center gap-44 mt-8 '}>
-          <Link href={'/exhibition/shop'} className={'text-[16px]'}>
-            SHOP
-          </Link>
-          <Link
-            href={'https://instagram.com/no__ex2'}
-            className={'text-[16px]'}
-          >
-            INSTAGRAM
-          </Link>
-          <Link href={'/archive/project01'} className={'text-[16px]'}>
-            ARCHIVE CENTER
-          </Link>
-        </div>
-      </div>
+      <ExhibitionTopBar />
       {/*  top bar end */}
 
       {/* body start */}
@@ -61,15 +37,6 @@ export default function Page() {
         }
       >
         <img src={'/exhibition/photos/DSC04559.jpg'} className={'w-full '} />
-        {/*<div*/}
-        {/*  style={{*/}
-        {/*    width: '100%',*/}
-        {/*    height: '70vh',*/}
-        {/*    backgroundImage: 'url("/exhibition/photos/DSC04559.jpg")',*/}
-        {/*    backgroundSize: 'cover',*/}
-        {/*    backgroundPosition: 'center',*/}
-        {/*  }}*/}
-        {/*></div>*/}
       </div>
     </>
   )
