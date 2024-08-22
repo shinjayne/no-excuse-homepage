@@ -21,13 +21,41 @@ const config: Config = {
           '100%': { transform: 'translateX(-80%)' },
         },
         blink: {
-          '10%' : {opacity : '0.5'},
-          '20%' : {opacity : '1'},
-        }
+          '10%': { opacity: '0.5' },
+          '20%': { opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '100%' },
+        },
+        fadeInDelay: {
+          '0%': { opacity: '0' },
+          '60%': { opacity: '0' },
+          '100%': { opacity: '100%' },
+        },
+        fadeInDelay2: {
+          '0%': { opacity: '0' },
+          '60%': { opacity: '0' },
+          '100%': { opacity: '100%' },
+        },
+        growWidth384: {
+          '0%': { width: '0px' },
+          '100%': { width: '384px' },
+        },
+        growWidth568: {
+          '0%': { width: '0px' },
+          '10%': { width: '0px' },
+          '100%': { width: '700px' },
+        },
       },
       animation: {
         slide: 'slide 30s linear infinite',
-        blink : 'blink 5s 1s linear infinite'
+        blink: 'blink 5s 1s linear infinite',
+        fadeIn: 'fadeIn 2s linear',
+        fadeInDelay: 'fadeInDelay 3s linear',
+        fadeInDelay2: 'fadeInDelay2 5s linear',
+        growWidth384: 'growWidth384 8s linear',
+        growWidth568: 'growWidth568 8s linear',
       },
     },
   },
@@ -36,6 +64,4 @@ const config: Config = {
   plugins: [nextui()],
 }
 
-
-
-export default config;
+export default config

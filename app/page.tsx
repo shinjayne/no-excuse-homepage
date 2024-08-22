@@ -1,12 +1,9 @@
 'use client'
 
 import { useWindowSize } from '@react-hooks-library/core'
-
-import { NextUIProvider } from '@nextui-org/react'
-import Mobile from '@/app/mobile'
-import Desktop from '@/app/desktop'
 import { redirect } from 'next/navigation'
 import { useEffect } from 'react'
+import NewHomeDesktop from '@/app/newhome_desktop'
 
 export default function Home() {
   const windowSize = useWindowSize()
@@ -20,19 +17,20 @@ export default function Home() {
     }
   })
 
-  if (windowSize.width > 640) {
-    console.log('desktop loaded')
-    return (
-      <NextUIProvider>
-        <Desktop />
-      </NextUIProvider>
-    )
-  } else {
-    console.log('mobile loaded')
-    return (
-      <NextUIProvider>
-        <Mobile />
-      </NextUIProvider>
-    )
-  }
+  return <NewHomeDesktop />
+  // if (windowSize.width > 640) {
+  //   console.log('desktop loaded')
+  //   return (
+  //     <NextUIProvider>
+  //       <Desktop />
+  //     </NextUIProvider>
+  //   )
+  // } else {
+  //   console.log('mobile loaded')
+  //   return (
+  //     <NextUIProvider>
+  //       <Mobile />
+  //     </NextUIProvider>
+  //   )
+  // }
 }
