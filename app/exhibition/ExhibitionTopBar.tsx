@@ -8,6 +8,8 @@ export function ExhibitionTopBar() {
         // marginTop: '-0.5vw',
         position: 'fixed',
         top: '-0.5vw',
+        fontFamily: 'RobotoMono',
+        letterSpacing: '0.1rem',
       }}
       className={'flex flex-col items-center justify-start'}
     >

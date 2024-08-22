@@ -16,6 +16,13 @@
   unicode-range: U+AC00-D7A3;
 }
 
+@font-face {
+  font-family: RobotoMono;
+  font-weight : 200;
+  src: url("/fonts/RobotoMono-VariableFont_wght.ttf");
+  unicode-range: U+AC00-D7A3;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

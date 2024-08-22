@@ -33,7 +33,13 @@ export default function ExhibitionShop() {
   return (
     <>
       <ExhibitionTopBar />
-      <div className={'pt-64 pb-64 px-6 flex flex-wrap gap-y-8'}>
+      <div
+        className={'pt-64 pb-64 px-6 flex flex-wrap gap-y-8'}
+        style={{
+          fontFamily: 'RobotoMono',
+          letterSpacing: '0.1rem',
+        }}
+      >
         <ExhibitionListProduct
           title={'PROJECT 01 CREW T SHIRTS - CELEBRATE EDITION'}
           price={'209,000 KRW'}
