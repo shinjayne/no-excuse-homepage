@@ -17,9 +17,18 @@ export function ExhibitionTopBar() {
           'flex justify-center gap-10 sm:gap-44 mt-8 text-[14px] sm:text-[16px]'
         }
       >
-        <Link href={'/exhibition/shop'}>SHOP</Link>
-        <Link href={'https://instagram.com/no__ex2'}>INSTAGRAM</Link>
-        <Link href={'/archive/project01'}>ARCHIVE CENTER</Link>
+        <Link href={'/exhibition/shop'} className={'w-[90px] text-center'}>
+          SHOP
+        </Link>
+        <Link
+          href={'https://instagram.com/no__ex2'}
+          className={'w-[90px] text-center'}
+        >
+          INSTAGRAM
+        </Link>
+        <Link href={'/archive/project01'} className={'w-[90px] text-center'}>
+          ARCHIVE
+        </Link>
       </div>
     </div>
   )

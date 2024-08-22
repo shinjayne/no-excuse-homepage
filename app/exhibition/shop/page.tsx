@@ -38,6 +38,12 @@ export default function ExhibitionShop() {
           subText={'SOLD OUT'}
           imgSrc={'/exhibition/products/001/001_1.jpeg'}
         />
+        <ExhibitionListProduct
+          title={'PROJECT 01 CREW T SHIRTS'}
+          price={'90,000 KRW'}
+          subText={''}
+          imgSrc={'/exhibition/products/001/001_2.jpeg'}
+        />
       </div>
     </>
   )
