@@ -4,13 +4,13 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.no-excuse-archive.com'),
-  title: 'BRAINSTORMING',
+  title: 'ARCHIVE CENTER',
   description: 'Inspiration, background of NO,EXCUSE project',
   openGraph: {
     title: 'Project 01. Self-Consciousness',
     type: 'website',
     url: 'https://www.no-excuse-archive.com/archive/project01',
-    siteName: 'NO, EXCUSE',
+    siteName: 'NO, EXCUSE ARCHIVE CENTER',
     description: 'Project 01. Self-Consciousness',
     images: [
       {

@@ -33,6 +33,9 @@ export function ExhibitionTopBar() {
         <Link href={'/archive/project01'} className={'w-[90px] text-center'}>
           ARCHIVE
         </Link>
+        <Link href={'/exhibition/about'} className={'w-[90px] text-center'}>
+          ABOUT
+        </Link>
       </div>
     </div>
   )

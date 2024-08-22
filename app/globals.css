@@ -23,6 +23,13 @@
   unicode-range: U+AC00-D7A3;
 }
 
+@font-face {
+  font-family: Inter;
+  font-weight : 100;
+  src :url("/fonts/Inter-VariableFont_opsz,wght.ttf");
+  unicode-range: U+AC00-D7A3;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
