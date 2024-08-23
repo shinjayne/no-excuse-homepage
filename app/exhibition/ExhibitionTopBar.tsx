@@ -10,6 +10,7 @@ export function ExhibitionTopBar() {
         top: '-0.5vw',
         fontFamily: 'RobotoMono',
         letterSpacing: '0.1rem',
+        backgroundColor: 'white',
       }}
       className={'flex flex-col items-center justify-start'}
     >
