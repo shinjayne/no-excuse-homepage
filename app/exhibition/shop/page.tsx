@@ -46,7 +46,7 @@ export default function ExhibitionShop() {
           subText={'SOLD OUT'}
           imgSrc={'/exhibition/products/001/001_1.jpeg'}
           link={
-            'https://www.sixshop.com/no-excuse/product/8d128b0e-6f52-4eb2-a095-8130563869ae'
+            'https://no9excuse.com/product/8d128b0e-6f52-4eb2-a095-8130563869ae'
           }
         />
         <ExhibitionListProduct
@@ -55,7 +55,7 @@ export default function ExhibitionShop() {
           subText={''}
           imgSrc={'/exhibition/products/001/001_2.jpeg'}
           link={
-            'https://www.sixshop.com/no-excuse/product/8d128b0e-6f52-4eb2-a095-8130563869ae'
+            'https://no9excuse.com/product/8d128b0e-6f52-4eb2-a095-8130563869ae'
           }
         />
       </div>

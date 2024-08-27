@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import ogImage from '@/app/opengraph-image.png'
 import Link from 'next/link'
+import Image from 'next/image'
+import { ReactNode } from 'react'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.no-excuse-archive.com'),
@@ -21,6 +23,28 @@ export const metadata: Metadata = {
       },
     ],
   },
+}
+
+function LookbookTile({
+  title,
+  text,
+  link,
+  imgSrc,
+}: {
+  title: string
+  text: ReactNode
+  link: string
+  imgSrc: string
+}) {
+  return (
+    <>
+      <div className={'flex flex-col items-center'}>
+        <div className={'mb-2'}>{title}</div>
+        <div className={'text-[11px] mb-2'}>{text}</div>
+        <Image src={imgSrc} alt={imgSrc} width={300} height={600} />
+      </div>
+    </>
+  )
 }
 
 function SubTitle({ text }: { text: string }) {
@@ -122,6 +146,41 @@ export default function Page() {
         </div>
 
         <SubTitle text={'Lookbook'} />
+        <div className={'flex flex-row gap-2'}>
+          <LookbookTile
+            title={'Look 1'}
+            text={
+              <>
+                Top : REWORK Stud Neck Crop T Shirts <br />
+                Bottom : Extralong Wrinkle Denim (Cropped)
+              </>
+            }
+            link={'/project01/lookbook/look1/DSC01627.jpg'}
+            imgSrc={'/project01/lookbook/look1/DSC01627.jpg'}
+          />
+          <LookbookTile
+            title={'Look 2'}
+            text={
+              <>
+                Top : Grunge Denim T Shirts <br />
+                Bottom : Extralong Wrinkle Denim (Long Unclipped)
+              </>
+            }
+            link={'/project01/lookbook/look2/DSC01786.jpg'}
+            imgSrc={'/project01/lookbook/look2/DSC01786.jpg'}
+          />
+          <LookbookTile
+            title={'Look 3'}
+            text={
+              <>
+                Top : Grunge Denim T Shirts <br />
+                Bottom : Extralong Wrinkle Denim (Long Unclipped)
+              </>
+            }
+            link={'/project01/lookbook/look2/DSC01786.jpg'}
+            imgSrc={'/project01/lookbook/look2/DSC01786.jpg'}
+          />
+        </div>
         <SubTitle text={'Brand Film'} />
 
         <SubTitle text={'Pieces - NO,EXCUSE EXHIBITION'} />
