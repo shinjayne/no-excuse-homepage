@@ -9,7 +9,7 @@ export default function NotFound() {
       window.location.hostname === 'showroom.no-excuse-archive.com' ||
       window.location.hostname === 'showroom.no-excuse.shop'
     ) {
-      redirect('https://sixshop.com/no-excuse' + window.location.pathname)
+      redirect('https://no9excuse.com' + window.location.pathname)
     }
   })
 

@@ -13,7 +13,7 @@ export default function Home() {
       window.location.hostname === 'showroom.no-excuse.shop' ||
       window.location.hostname === 'showroom.no-excuse-archive.com'
     ) {
-      redirect('https://sixshop.com/no-excuse' + window.location.pathname)
+      redirect('https://no9excuse.com' + window.location.pathname)
     }
   })
 

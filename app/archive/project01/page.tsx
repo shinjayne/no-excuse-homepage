@@ -38,9 +38,9 @@ function LookbookTile({
 }) {
   return (
     <>
-      <div className={'flex flex-col items-center'}>
+      <div className={'flex flex-col items-center basis-1/2 sm:basis-1/4'}>
         <div className={'mb-2'}>{title}</div>
-        <div className={'text-[11px] mb-2'}>{text}</div>
+        <div className={'text-[11px] mb-2 h-[50px]'}>{text}</div>
         <Image src={imgSrc} alt={imgSrc} width={300} height={600} />
       </div>
     </>
@@ -146,13 +146,17 @@ export default function Page() {
         </div>
 
         <SubTitle text={'Lookbook'} />
-        <div className={'flex flex-row gap-2'}>
+        <div
+          className={
+            'flex flex-row gap-x-2 gap-y-8 flex-wrap place-content-center'
+          }
+        >
           <LookbookTile
             title={'Look 1'}
             text={
               <>
                 Top : REWORK Stud Neck Crop T Shirts <br />
-                Bottom : Extralong Wrinkle Denim (Cropped)
+                Bottom : Extralong Wrinkle Denim (Short Cropped)
               </>
             }
             link={'/project01/lookbook/look1/DSC01627.jpg'}
@@ -173,12 +177,30 @@ export default function Page() {
             title={'Look 3'}
             text={
               <>
-                Top : Grunge Denim T Shirts <br />
-                Bottom : Extralong Wrinkle Denim (Long Unclipped)
+                Acc : Shirts Balaclava <br />
+                Bottom : Extralong Wrinkle Denim (Long Clipped)
               </>
             }
-            link={'/project01/lookbook/look2/DSC01786.jpg'}
-            imgSrc={'/project01/lookbook/look2/DSC01786.jpg'}
+            link={'/project01/lookbook/look3/DSC02261.jpg'}
+            imgSrc={'/project01/lookbook/look3/DSC02261.jpg'}
+          />
+          <LookbookTile
+            title={'Look 4'}
+            text={
+              <>
+                Top : [SELECT] Multi Cutting Sleveless <br />
+                Bottom : Extralong Wrinkle Denim (Long Unclipped)
+                <br /> Acc : Module Camo Skirt
+              </>
+            }
+            link={'/project01/lookbook/look4/IMG_2947.jpg'}
+            imgSrc={'/project01/lookbook/look4/IMG_2947.jpg'}
+          />
+          <LookbookTile
+            title={'Look 5'}
+            text={<></>}
+            link={'/project01/lookbook/look4/IMG_2947.jpg'}
+            imgSrc={'/project01/lookbook/look4/IMG_2947.jpg'}
           />
         </div>
         <SubTitle text={'Brand Film'} />

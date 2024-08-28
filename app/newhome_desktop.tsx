@@ -56,7 +56,7 @@ export default function NewHomeDesktop() {
               width: 134,
             }}
             onClick={() => {
-              window.open('https://sixshop.com/no-excuse')
+              window.open('https://no9excuse.com')
             }}
           />
         </div>
