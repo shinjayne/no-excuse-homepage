@@ -43,8 +43,8 @@ export default function ExhibitionShop() {
         }}
       >
         <ExhibitionListProduct
-          title={'EXTRA LONG WRINKLE DENIM'}
-          price={'569,000 KRW'}
+          title={'V1.0 EXTRA LONG WRINKLE DENIM'}
+          price={'599,000 KRW'}
           subText={'DROP AT 9/4 17:00 KST'}
           subTextType={'blue'}
           imgSrc={'/exhibition/products/003_wrinklepants/003_1_sq.jpg'}
@@ -53,7 +53,7 @@ export default function ExhibitionShop() {
           }
         />
         <ExhibitionListProduct
-          title={'PROJECT 01 CREW T SHIRTS'}
+          title={'V1.0 PROJECT 01 CREW T SHIRTS'}
           price={'90,000 KRW'}
           subText={'DROP AT 9/4 17:00 KST'}
           subTextType={'blue'}
@@ -63,7 +63,7 @@ export default function ExhibitionShop() {
           }
         />
         <ExhibitionListProduct
-          title={'PROJECT 01 CREW T SHIRTS - CELEBRATE EDITION'}
+          title={'V1.0 PROJECT 01 CREW T SHIRTS - CELEBRATE EDITION'}
           price={'209,000 KRW'}
           subText={'SOLD OUT'}
           subTextType={'red'}
