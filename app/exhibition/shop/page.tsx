@@ -24,7 +24,7 @@ function ExhibitionListProduct({
       <img src={imgSrc} />
       <div className={'mb-2'}>{title}</div>
       <div className={'mb-2'}>{price}</div>
-      <div className={'text-red-800 font-bold'}>{subText}</div>
+      <div className={'text-red-800 font-black'}>{subText}</div>
     </Link>
   )
 }
@@ -41,19 +41,19 @@ export default function ExhibitionShop() {
         }}
       >
         <ExhibitionListProduct
+          title={'PROJECT 01 CREW T SHIRTS'}
+          price={'90,000 KRW'}
+          subText={''}
+          imgSrc={'/exhibition/products/002_crewt/002_1.jpg'}
+          link={
+            'https://no9excuse.com/product/8d128b0e-6f52-4eb2-a095-8130563869ae-108'
+          }
+        />
+        <ExhibitionListProduct
           title={'PROJECT 01 CREW T SHIRTS - CELEBRATE EDITION'}
           price={'209,000 KRW'}
           subText={'SOLD OUT'}
           imgSrc={'/exhibition/products/001/001_1.jpeg'}
-          link={
-            'https://no9excuse.com/product/8d128b0e-6f52-4eb2-a095-8130563869ae'
-          }
-        />
-        <ExhibitionListProduct
-          title={'PROJECT 01 CREW T SHIRTS'}
-          price={'90,000 KRW'}
-          subText={''}
-          imgSrc={'/exhibition/products/001/001_2.jpeg'}
           link={
             'https://no9excuse.com/product/8d128b0e-6f52-4eb2-a095-8130563869ae'
           }
