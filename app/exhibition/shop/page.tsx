@@ -43,9 +43,19 @@ export default function ExhibitionShop() {
         }}
       >
         <ExhibitionListProduct
+          title={'EXTRA LONG WRINKLE DENIM'}
+          price={'569,000 KRW'}
+          subText={'DROP AT 9/4 17:00 KST'}
+          subTextType={'blue'}
+          imgSrc={'/exhibition/products/003_wrinklepants/003_1_sq.jpg'}
+          link={
+            'https://no9excuse.com/product/b570b312-5292-408a-a54c-9465a84be606'
+          }
+        />
+        <ExhibitionListProduct
           title={'PROJECT 01 CREW T SHIRTS'}
           price={'90,000 KRW'}
-          subText={'DROP AT 9/4 13:00 KST'}
+          subText={'DROP AT 9/4 17:00 KST'}
           subTextType={'blue'}
           imgSrc={'/exhibition/products/002_crewt/002_1.jpg'}
           link={
