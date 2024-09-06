@@ -52,9 +52,10 @@ export default function ExhibitionShop() {
             'https://no9excuse.com/product/b570b312-5292-408a-a54c-9465a84be606'
           }
         />
+        777
         <ExhibitionListProduct
           title={'V1.0 PROJECT 01 CREW T SHIRTS'}
-          price={'90,000 KRW'}
+          price={'89,000 KRW'}
           subText={''}
           subTextType={'blue'}
           imgSrc={'/exhibition/products/002_crewt/002_1.jpg'}
