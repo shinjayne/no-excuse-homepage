@@ -45,7 +45,7 @@ export default function ExhibitionShop() {
         <ExhibitionListProduct
           title={'V1.0 EXTRA LONG WRINKLE DENIM'}
           price={'599,000 KRW'}
-          subText={'DROP AT 9/6 17:00 KST'}
+          subText={'DROP AT 9/9 17:00 KST'}
           subTextType={'blue'}
           imgSrc={'/exhibition/products/003_wrinklepants/003_1_sq.jpg'}
           link={
