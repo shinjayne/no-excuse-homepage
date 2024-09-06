@@ -55,7 +55,7 @@ export default function ExhibitionShop() {
         <ExhibitionListProduct
           title={'V1.0 PROJECT 01 CREW T SHIRTS'}
           price={'90,000 KRW'}
-          subText={'DROP AT 9/6 17:00 KST'}
+          subText={''}
           subTextType={'blue'}
           imgSrc={'/exhibition/products/002_crewt/002_1.jpg'}
           link={
